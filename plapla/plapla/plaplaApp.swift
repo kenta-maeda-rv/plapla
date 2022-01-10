@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct plaplaApp: App {
+    @Environment(\.scenePhase) private var scenePhase
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+        }
+        .onChange(of: scenePhase) { scene in
+            switch scene {
+            case .active:
+                logger.debug("scenePhase: active")
+            case .inactive:
+                logger.debug("scenePhase: inactive")
+            case .background:
+                logger.debug("scenePhase: background")
+            @unknown default: break
+            }
         }
     }
 }
