@@ -13,7 +13,7 @@ struct plaplaApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeTabView()
         }
         .onChange(of: scenePhase) { scene in
             switch scene {
