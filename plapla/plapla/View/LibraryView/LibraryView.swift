@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct LibraryView: View {
+    @StateObject var libraryViewModel: LibraryViewModel = LibraryViewModel()
+    
     var body: some View {
-        Text("LibraryView")
+        ScrollView(.vertical) {
+            LazyVGrid(columns: libraryViewModel.columns,spacing: 10, pinnedViews: [.sectionHeaders]) {
+                Section {
+                    Text("LibraryView")
+                    Text("LibraryView")
+                    Text("LibraryView")
+                    Text("LibraryView")
+                    Text("LibraryView")
+                } header: {
+                    Text("LibraryView")
+                        .hLeading()
+                }
+            }
+        }
+        .padding()
     }
 }
 
