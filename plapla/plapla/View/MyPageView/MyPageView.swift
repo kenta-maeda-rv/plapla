@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct MyPageView: View {
+    @StateObject var myPageViewModel: MyPageViewModel = MyPageViewModel()
+    
     var body: some View {
-        Text("MyPageView")
+        NavigationView {
+            List {
+                Section(content: {
+                    Text("MyPageView")
+                    Text("MyPageView")
+                    Text("MyPageView")
+                }, header: {
+                    Text("MyPageView")
+                })
+                Section(content: {
+                    Text("MyPageView")
+                    Text("MyPageView")
+                    Text("MyPageView")
+                }, header: {
+                    Text("MyPageView")
+                })
+            }
+            .navigationTitle(Text("MyPageView"))
+        }
     }
 }
 
