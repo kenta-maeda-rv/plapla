@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		6E930374278AAC5F006025AB /* plapla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plapla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E930377278AAC5F006025AB /* plaplaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plaplaApp.swift; sourceTree = "<group>"; };
-		6E93037B278AAC60006025AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E93037B278AAC60006025AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		6E93037E278AAC60006025AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E930380278AAC60006025AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E9BCF5C278BFBF700074C64 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -50,9 +50,6 @@
 		6E93036B278AAC5F006025AB = {
 			isa = PBXGroup;
 			children = (
-				6E930380278AAC60006025AB /* Info.plist */,
-				6E93037B278AAC60006025AB /* Assets.xcassets */,
-				6E93037D278AAC60006025AB /* Preview Content */,
 				6E930376278AAC5F006025AB /* plapla */,
 				6E930375278AAC5F006025AB /* Products */,
 			);
@@ -69,6 +66,9 @@
 		6E930376278AAC5F006025AB /* plapla */ = {
 			isa = PBXGroup;
 			children = (
+				6E930380278AAC60006025AB /* Info.plist */,
+				6E93037B278AAC60006025AB /* Assets.xcassets */,
+				6E93037D278AAC60006025AB /* Preview Content */,
 				6ECDFC602794056000B1E35A /* View */,
 				6EFAB273278C175F00D1C9E5 /* Model */,
 				6ECDFC642794060A00B1E35A /* Extention */,
@@ -83,7 +83,8 @@
 			children = (
 				6E93037E278AAC60006025AB /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			name = "Preview Content";
+			path = "../Preview Content";
 			sourceTree = "<group>";
 		};
 		6ECDFC5F2794054600B1E35A /* HomeView */ = {
@@ -353,6 +354,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"plapla/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = plapla/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -374,6 +376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"plapla/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = plapla/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
