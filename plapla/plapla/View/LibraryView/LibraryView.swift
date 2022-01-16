@@ -12,16 +12,20 @@ struct LibraryView: View {
     
     var body: some View {
         ScrollView(.vertical) {
-            LazyVGrid(columns: libraryViewModel.columns,spacing: 10, pinnedViews: [.sectionHeaders]) {
+            LazyVGrid(columns: libraryViewModel.columns,spacing: 20, pinnedViews: [.sectionHeaders]) {
                 Section {
-                    Text("LibraryView")
-                    Text("LibraryView")
-                    Text("LibraryView")
-                    Text("LibraryView")
-                    Text("LibraryView")
+                    ForEach(0..<10) { image in
+                        Image(systemName: "folder")
+                            .frame(width: 150, height: 150, alignment: .center)
+                            .background(
+                                Color.gray
+                            )
+                            .cornerRadius(15)
+                    }
                 } header: {
                     Text("LibraryView")
                         .hLeading()
+                        .font(.largeTitle.bold())
                 }
             }
         }
