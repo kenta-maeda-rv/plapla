@@ -18,7 +18,7 @@ struct HomeView: View {
                 Section {
                     
                     CardsView()
-                    
+                    ContentAddButtonView()
                 } header: {
                     
                     HeaderView()
@@ -91,6 +91,33 @@ struct HomeView: View {
             )
         }
         .padding()
+    }
+    
+    struct ContentAddButtonView: View {
+        @State var showContentAddView = false
+        
+        let circleWidth: CGFloat = 100
+        
+        var body: some View {
+            VStack() {
+                
+                Button(action: {
+                    self.showContentAddView.toggle()
+                }) {
+                    Image(systemName: "plus.circle")
+                        .resizable()
+                        .frame(width: circleWidth,
+                               height: circleWidth,
+                               alignment: .center)
+                    
+                }.sheet(isPresented: $showContentAddView) {
+                    
+                    ContentAddView()
+                
+                }
+                
+            }
+        }
     }
 }
 

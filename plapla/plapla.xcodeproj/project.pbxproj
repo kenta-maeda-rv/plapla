@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E240A1327DF3C6E00D76C14 /* ContentAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E240A1227DF3C6E00D76C14 /* ContentAddViewModel.swift */; };
+		6E240A1527DF3C7F00D76C14 /* ContentAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E240A1427DF3C7F00D76C14 /* ContentAddView.swift */; };
 		6E930378278AAC5F006025AB /* plaplaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E930377278AAC5F006025AB /* plaplaApp.swift */; };
 		6E93037C278AAC60006025AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E93037B278AAC60006025AB /* Assets.xcassets */; };
 		6E93037F278AAC60006025AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E93037E278AAC60006025AB /* Preview Assets.xcassets */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E240A1227DF3C6E00D76C14 /* ContentAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAddViewModel.swift; sourceTree = "<group>"; };
+		6E240A1427DF3C7F00D76C14 /* ContentAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAddView.swift; sourceTree = "<group>"; };
 		6E930374278AAC5F006025AB /* plapla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plapla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E930377278AAC5F006025AB /* plaplaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plaplaApp.swift; sourceTree = "<group>"; };
 		6E93037B278AAC60006025AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E240A1127DF3C2F00D76C14 /* ContentAddView */ = {
+			isa = PBXGroup;
+			children = (
+				6E240A1427DF3C7F00D76C14 /* ContentAddView.swift */,
+				6E240A1227DF3C6E00D76C14 /* ContentAddViewModel.swift */,
+			);
+			path = ContentAddView;
+			sourceTree = "<group>";
+		};
 		6E93036B278AAC5F006025AB = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +120,7 @@
 				6ECDFC5F2794054600B1E35A /* HomeView */,
 				6ECDFC62279405AB00B1E35A /* LibraryView */,
 				6ECDFC63279405BF00B1E35A /* MyPageView */,
+				6E240A1127DF3C2F00D76C14 /* ContentAddView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E9BCF5F278BFF1800074C64 /* HomeTabView.swift in Sources */,
+				6E240A1527DF3C7F00D76C14 /* ContentAddView.swift in Sources */,
 				6E9BCF61278C017A00074C64 /* HomeView.swift in Sources */,
 				6EFAB275278C17B700D1C9E5 /* Content.swift in Sources */,
 				6EFAB277278C18A700D1C9E5 /* HomeViewModel.swift in Sources */,
@@ -230,6 +245,7 @@
 				6E9BCF5D278BFBF700074C64 /* Logger.swift in Sources */,
 				6EFAB279278C1AAB00D1C9E5 /* View.swift in Sources */,
 				6E9BCF63278C01F700074C64 /* LibraryView.swift in Sources */,
+				6E240A1327DF3C6E00D76C14 /* ContentAddViewModel.swift in Sources */,
 				6E930378278AAC5F006025AB /* plaplaApp.swift in Sources */,
 				6ECDFC66279453DC00B1E35A /* LibraryViewModel.swift in Sources */,
 				6E9BCF65278C020300074C64 /* MyPageView.swift in Sources */,
