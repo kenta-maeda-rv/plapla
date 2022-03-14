@@ -14,18 +14,19 @@ struct MyPageView: View {
         NavigationView {
             List {
                 Section(content: {
-                    Text("MyPageView")
-                    Text("MyPageView")
-                    Text("MyPageView")
+                    Text("共有設定")
                 }, header: {
-                    Text("MyPageView")
+                    Text("各種設定")
                 })
+                
                 Section(content: {
-                    Text("MyPageView")
-                    Text("MyPageView")
-                    Text("MyPageView")
+                    Text("問い合わせ")
+                    Text("レビュー")
+                    Text("ライセンス")
+                    Text("利用規約・プライバシーポリシー")
+                    Text("バージョン")
                 }, header: {
-                    Text("MyPageView")
+                    Text("")
                 })
             }
             .navigationTitle(Text("MyPageView"))
