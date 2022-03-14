@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeTabView: View {
+    //初回起動(true:初回起動 ,false:2回目以降)
+    @AppStorage("isFirstLaunch") var isFirstLaunch = true
+    
     var body: some View {
         TabView {
             HomeView()
@@ -25,6 +28,9 @@ struct HomeTabView: View {
                     Image(systemName: "person")
                     Text("マイページ")
                 }
+        }
+        .fullScreenCover(isPresented: $isFirstLaunch) {
+            OnBoargingView()
         }
     }
 }
