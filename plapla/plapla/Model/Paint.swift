@@ -10,16 +10,18 @@ import SwiftUI
 
 /// 塗料
 struct Paint {
+    /// 塗料カラー名
+    var colorName: String
     /// 塗料カラー
-    var color: PaintColor
+    var color: UIColor
     /// ブランド
-    var brand: PaintBrand
+    var brand: String
     /// タイプ
-    var type: PaintType
+    var type: String
     /// 溶剤
-    var solvent: Solvent
+    var solvent: String
     /// 仕上がり
-    var finish: Finish
+    var finish: String
     
 }
 

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var homeViewModel: HomeViewModel = HomeViewModel()
+    @StateObject var viewModel: HomeViewModel = HomeViewModel()
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -45,7 +45,7 @@ struct HomeView: View {
     func CardsView() -> some View {
         LazyVStack {
             
-            ForEach(homeViewModel.contents) { content in
+            ForEach(viewModel.contents) { content in
                 CardView(content: content)
             }
             

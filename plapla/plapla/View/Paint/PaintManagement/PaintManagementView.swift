@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct PaintManagementView: View {
-    @StateObject var paintManagement: PaintManagementViewModel = PaintManagementViewModel()
+    @StateObject var viewModel: PaintManagementViewModel = PaintManagementViewModel()
     
     var body: some View {
         VStack {

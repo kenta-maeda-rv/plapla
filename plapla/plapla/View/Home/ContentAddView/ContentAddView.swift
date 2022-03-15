@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentAddView: View {
     @Environment(\.presentationMode) var presentationMode
     
-    @StateObject var contentAddViewModel: ContentAddViewModel = ContentAddViewModel()
+    @StateObject var viewModel: ContentAddViewModel = ContentAddViewModel()
     
     @State var titleText = ""
     
