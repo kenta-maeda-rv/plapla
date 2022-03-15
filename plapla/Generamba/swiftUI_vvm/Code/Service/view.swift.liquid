@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct {{ module_info.name }}View: View {
+    @StateObject var {{ module_info.name }}: {{ module_info.name }}ViewModel = {{ module_info.name }}ViewModel()
+    
     var body: some View {
         VStack {
             Text("{{ module_info.name }}")

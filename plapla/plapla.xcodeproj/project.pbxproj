@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3ABDD4066395FB6223A19F8C /* PaintAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B2DFF71D12EA2E7FB6FEEF /* PaintAddView.swift */; };
 		468A6F60C397A21BF64CABA1 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CF320B9C5D7861002D554 /* NotificationViewModel.swift */; };
 		6E240A1327DF3C6E00D76C14 /* ContentAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E240A1227DF3C6E00D76C14 /* ContentAddViewModel.swift */; };
 		6E240A1527DF3C7F00D76C14 /* ContentAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E240A1427DF3C7F00D76C14 /* ContentAddView.swift */; };
@@ -29,10 +30,18 @@
 		6EFAB275278C17B700D1C9E5 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFAB274278C17B700D1C9E5 /* Content.swift */; };
 		6EFAB277278C18A700D1C9E5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFAB276278C18A700D1C9E5 /* HomeViewModel.swift */; };
 		6EFAB279278C1AAB00D1C9E5 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFAB278278C1AAB00D1C9E5 /* View.swift */; };
+		8E88ADEBD4884365756F5E93 /* PaintDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B653F3F0F0362DCC057D6DA /* PaintDetailView.swift */; };
+		90C28C01756203B3B8C4C8D4 /* PaintManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B235AB7C30562D8E639B0 /* PaintManagementView.swift */; };
+		D696971D07608E953DD4B07E /* PaintDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926ED817EA121648D6030726 /* PaintDetailViewModel.swift */; };
 		DA310C61F5CF4D207B075F91 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2860D959EB31220C1065D /* NotificationView.swift */; };
+		E62FABFE40598AF4D6E2EE97 /* PaintManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126CDD4B33D7DFABF699D6B6 /* PaintManagementViewModel.swift */; };
+		E6E343106B5831380FDFA91C /* PaintAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C50050143C1C6ED3E9C321 /* PaintAddViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		126CDD4B33D7DFABF699D6B6 /* PaintManagementViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintManagementViewModel.swift; sourceTree = "<group>"; };
+		20B2DFF71D12EA2E7FB6FEEF /* PaintAddView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintAddView.swift; sourceTree = "<group>"; };
+		3B653F3F0F0362DCC057D6DA /* PaintDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintDetailView.swift; sourceTree = "<group>"; };
 		6AF2860D959EB31220C1065D /* NotificationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6E240A1227DF3C6E00D76C14 /* ContentAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAddViewModel.swift; sourceTree = "<group>"; };
 		6E240A1427DF3C7F00D76C14 /* ContentAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAddView.swift; sourceTree = "<group>"; };
@@ -57,7 +66,10 @@
 		6EFAB274278C17B700D1C9E5 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		6EFAB276278C18A700D1C9E5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6EFAB278278C1AAB00D1C9E5 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		74C50050143C1C6ED3E9C321 /* PaintAddViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintAddViewModel.swift; sourceTree = "<group>"; };
+		926ED817EA121648D6030726 /* PaintDetailViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintDetailViewModel.swift; sourceTree = "<group>"; };
 		A85CF320B9C5D7861002D554 /* NotificationViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		FC0B235AB7C30562D8E639B0 /* PaintManagementView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintManagementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,15 @@
 				A85CF320B9C5D7861002D554 /* NotificationViewModel.swift */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		3238B463AC8F51252D3AF5CB /* PaintAdd */ = {
+			isa = PBXGroup;
+			children = (
+				20B2DFF71D12EA2E7FB6FEEF /* PaintAddView.swift */,
+				74C50050143C1C6ED3E9C321 /* PaintAddViewModel.swift */,
+			);
+			path = PaintAdd;
 			sourceTree = "<group>";
 		};
 		6E240A1127DF3C2F00D76C14 /* ContentAddView */ = {
@@ -181,6 +202,7 @@
 				6E240A1E27DF803100D76C14 /* OnBoarding */,
 				6ECDFC612794058300B1E35A /* HomeTabView */,
 				6E240A1C27DF7DFB00D76C14 /* Home */,
+				6EF1A49927E0894C00F5CD38 /* Paint */,
 				6E240A1D27DF7E1900D76C14 /* Library */,
 				6ECDFC63279405BF00B1E35A /* MyPageView */,
 			);
@@ -221,6 +243,16 @@
 			path = Extention;
 			sourceTree = "<group>";
 		};
+		6EF1A49927E0894C00F5CD38 /* Paint */ = {
+			isa = PBXGroup;
+			children = (
+				A15051C46E9BAEF4F52C3F51 /* PaintManagement */,
+				3238B463AC8F51252D3AF5CB /* PaintAdd */,
+				9588BF06C309B2CDFCAE364C /* PaintDetail */,
+			);
+			path = Paint;
+			sourceTree = "<group>";
+		};
 		6EFAB273278C175F00D1C9E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +261,24 @@
 				6EF1A49627E079BC00F5CD38 /* Paint.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9588BF06C309B2CDFCAE364C /* PaintDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3B653F3F0F0362DCC057D6DA /* PaintDetailView.swift */,
+				926ED817EA121648D6030726 /* PaintDetailViewModel.swift */,
+			);
+			path = PaintDetail;
+			sourceTree = "<group>";
+		};
+		A15051C46E9BAEF4F52C3F51 /* PaintManagement */ = {
+			isa = PBXGroup;
+			children = (
+				FC0B235AB7C30562D8E639B0 /* PaintManagementView.swift */,
+				126CDD4B33D7DFABF699D6B6 /* PaintManagementViewModel.swift */,
+			);
+			path = PaintManagement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +371,12 @@
 				6E9BCF65278C020300074C64 /* MyPageView.swift in Sources */,
 				DA310C61F5CF4D207B075F91 /* NotificationView.swift in Sources */,
 				468A6F60C397A21BF64CABA1 /* NotificationViewModel.swift in Sources */,
+				90C28C01756203B3B8C4C8D4 /* PaintManagementView.swift in Sources */,
+				E62FABFE40598AF4D6E2EE97 /* PaintManagementViewModel.swift in Sources */,
+				8E88ADEBD4884365756F5E93 /* PaintDetailView.swift in Sources */,
+				D696971D07608E953DD4B07E /* PaintDetailViewModel.swift in Sources */,
+				3ABDD4066395FB6223A19F8C /* PaintAddView.swift in Sources */,
+				E6E343106B5831380FDFA91C /* PaintAddViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
