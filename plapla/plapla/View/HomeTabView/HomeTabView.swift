@@ -23,6 +23,11 @@ struct HomeTabView: View {
                     Image(systemName: "square.grid.2x2")
                     Text("ライブラリ")
                 }
+            PaintManagementView()
+                .tabItem {
+                    Image(systemName: "paintbrush.pointed")
+                    Text("塗料")
+                }
             MyPageView()
                 .tabItem {
                     Image(systemName: "person")
