@@ -1,0 +1,18 @@
+# Template information section
+name: swiftUI_vvm
+summary: newSwiftUIView
+author: KentaMaeda
+version: 1.0.0
+license: 
+
+# The declarations for code files
+code_files:
+- {name: View.swift, path: Code/Service/View.swift.liquid}
+- {name: ViewModel.swift, path: Code/Service/ViewModel.swift.liquid}
+
+# The declarations for test files
+test_files:
+- {name: ServiceTests.m, path: Tests/Service/service_tests.m.liquid}
+
+# Template dependencies
+dependencies:
