@@ -7,8 +7,8 @@ license:
 
 # The declarations for code files
 code_files:
-- {name: view.swift, path: Code/Service/view.swift.liquid}
-- {name: viewModel.swift, path: Code/Service/viewModel.swift.liquid}
+- {name: View.swift, path: Code/Service/View.swift.liquid}
+- {name: ViewModel.swift, path: Code/Service/ViewModel.swift.liquid}
 
 # The declarations for test files
 test_files:
