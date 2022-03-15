@@ -12,8 +12,10 @@ struct PaintManagementView: View {
     @StateObject var viewModel: PaintManagementViewModel = PaintManagementViewModel()
     
     var body: some View {
-        VStack {
-            Text("PaintManagement")
+        List {
+            ForEach(viewModel.paintDatas) { data in
+                Text(data.colorName)
+            }
         }
     }
 }

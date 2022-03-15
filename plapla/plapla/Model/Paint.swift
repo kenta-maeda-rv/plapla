@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 /// 塗料
-struct Paint {
+struct Paint: Identifiable {
+    // 固有id
+    var id = UUID().uuidString
     /// 塗料カラー名
     var colorName: String
     /// 塗料カラー

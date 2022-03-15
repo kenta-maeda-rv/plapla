@@ -16,7 +16,14 @@ class PaintManagementViewModel: ObservableObject {
               brand: PaintBrand.gaiaColor,
               type: PaintType.solvent,
               solvent: Solvent.alcohol,
-              finish: Finish.clearColor)
+              finish: Finish.clearColor),
+        
+        Paint(colorName: PaintColor.green.colorString,
+              color: PaintColor.green.color,
+              brand: PaintBrand.MMP,
+              type: PaintType.bottle,
+              solvent: Solvent.lacquer,
+              finish: Finish.luminousColor)
     
     ]
 }
