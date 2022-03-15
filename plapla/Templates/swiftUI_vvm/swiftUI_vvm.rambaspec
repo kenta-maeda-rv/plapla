@@ -7,12 +7,12 @@ license:
 
 # The declarations for code files
 code_files:
-- {name: Service/Service.h, path: Code/Service/service.h.liquid}
-- {name: Service/Service.m, path: Code/Service/service.m.liquid}
+- {name: view.swift, path: Code/Service/view.swift.liquid}
+- {name: viewModel.swift, path: Code/Service/viewModel.swift.liquid}
 
 # The declarations for test files
 test_files:
-- {name: Service/ServiceTests.m, path: Tests/Service/service_tests.m.liquid}
+- {name: ServiceTests.m, path: Tests/Service/service_tests.m.liquid}
 
 # Template dependencies
 dependencies:

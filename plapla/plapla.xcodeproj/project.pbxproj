@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39FEAFEE519B47CD128ED02E /* hoge4Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDCE0259257B12DD1460A68 /* hoge4Service.m */; };
-		649279B7703F13122D16C87C /* hoge4Service.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75A57EDF66AD04982201D /* hoge4Service.m */; };
 		6E240A1327DF3C6E00D76C14 /* ContentAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E240A1227DF3C6E00D76C14 /* ContentAddViewModel.swift */; };
 		6E240A1527DF3C7F00D76C14 /* ContentAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E240A1427DF3C7F00D76C14 /* ContentAddView.swift */; };
 		6E240A1927DF7AB400D76C14 /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E240A1827DF7AB400D76C14 /* ContentDetailView.swift */; };
@@ -32,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1EDCE0259257B12DD1460A68 /* hoge4Service.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = hoge4Service.m; sourceTree = "<group>"; };
 		6E240A1227DF3C6E00D76C14 /* ContentAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAddViewModel.swift; sourceTree = "<group>"; };
 		6E240A1427DF3C7F00D76C14 /* ContentAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAddView.swift; sourceTree = "<group>"; };
 		6E240A1827DF7AB400D76C14 /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
@@ -55,9 +52,6 @@
 		6EFAB274278C17B700D1C9E5 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		6EFAB276278C18A700D1C9E5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6EFAB278278C1AAB00D1C9E5 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		80DC12FCB3CE175157D8D944 /* hoge4Service.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = hoge4Service.h; sourceTree = "<group>"; };
-		A0D8389420881E1B57DD6172 /* hoge4Service.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = hoge4Service.h; sourceTree = "<group>"; };
-		C3B75A57EDF66AD04982201D /* hoge4Service.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = hoge4Service.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,34 +65,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A495F67B8DDBC42ED8498E9 /* hoge4 */ = {
-			isa = PBXGroup;
-			children = (
-				5DF0EDF250B4E74EDA759C34 /* Service */,
-			);
-			name = hoge4;
-			path = hoge4;
-			sourceTree = "<group>";
-		};
-		4EFD23A80063F219961789DD /* hoge4 */ = {
-			isa = PBXGroup;
-			children = (
-				ADC863F8F959383B3A09E428 /* Service */,
-			);
-			name = hoge4;
-			path = hoge4;
-			sourceTree = "<group>";
-		};
-		5DF0EDF250B4E74EDA759C34 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				A0D8389420881E1B57DD6172 /* hoge4Service.h */,
-				C3B75A57EDF66AD04982201D /* hoge4Service.m */,
-			);
-			name = Service;
-			path = Service;
-			sourceTree = "<group>";
-		};
 		6E240A1127DF3C2F00D76C14 /* ContentAddView */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +137,6 @@
 				6ECDFC642794060A00B1E35A /* Extention */,
 				6E930377278AAC5F006025AB /* plaplaApp.swift */,
 				6E9BCF5C278BFBF700074C64 /* Logger.swift */,
-				4EFD23A80063F219961789DD /* hoge4 */,
 			);
 			path = plapla;
 			sourceTree = "<group>";
@@ -202,7 +167,6 @@
 				6E240A1C27DF7DFB00D76C14 /* Home */,
 				6E240A1D27DF7E1900D76C14 /* Library */,
 				6ECDFC63279405BF00B1E35A /* MyPageView */,
-				4A495F67B8DDBC42ED8498E9 /* hoge4 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,16 +212,6 @@
 				6EFAB274278C17B700D1C9E5 /* Content.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		ADC863F8F959383B3A09E428 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				80DC12FCB3CE175157D8D944 /* hoge4Service.h */,
-				1EDCE0259257B12DD1460A68 /* hoge4Service.m */,
-			);
-			name = Service;
-			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,8 +301,6 @@
 				6E240A1B27DF7ABD00D76C14 /* ContentDetailViewModel.swift in Sources */,
 				6E240A2327DF803100D76C14 /* BoardingScreen.swift in Sources */,
 				6E9BCF65278C020300074C64 /* MyPageView.swift in Sources */,
-				39FEAFEE519B47CD128ED02E /* hoge4Service.m in Sources */,
-				649279B7703F13122D16C87C /* hoge4Service.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
