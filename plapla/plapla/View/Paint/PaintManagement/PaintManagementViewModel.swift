@@ -9,5 +9,9 @@
 import SwiftUI
 
 class PaintManagementViewModel: ObservableObject {
-
+    
+    @Published var paintDatas:[Paint] = [
+        Paint(color: .blue, brand: .gaiaColor, type: .solvent, solvent: .alcohol, finish: .clearColor)
+    
+    ]
 }
