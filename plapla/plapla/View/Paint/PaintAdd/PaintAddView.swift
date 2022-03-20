@@ -9,11 +9,72 @@
 import SwiftUI
 
 struct PaintAddView: View {
+    @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel: PaintAddViewModel = PaintAddViewModel()
     
     var body: some View {
         VStack {
-            Text("PaintAdd")
+            HStack {
+                Text("塗料カラー名")
+                
+                Spacer()
+                
+                Picker(selection: .constant(1), label: Text("色名")) {
+                    ForEach(PaintColor.allCases, id: \.self) { color in
+                        Text(color.colorString)
+                    }
+                }
+            }
+            HStack {
+                Text("ブランド")
+                
+                Spacer()
+                
+                Picker(selection: .constant(1), label: Text("ブランド")) {
+                    ForEach(PaintBrand.allCases, id: \.self) { brand in
+                        Text(brand.rawValue).tag(brand)
+                    }
+                }
+            }
+            HStack {
+                Text("タイプ")
+                
+                Spacer()
+                
+                Picker(selection: .constant(1), label: Text("タイプ")) {
+                    ForEach(PaintType.allCases, id: \.self) { type in
+                        Text(type.rawValue).tag(type)
+                    }
+                }
+            }
+            HStack {
+                Text("溶剤")
+                
+                Spacer()
+                
+                Picker(selection: .constant(1), label: Text("溶剤")) {
+                    ForEach(Solvent.allCases, id: \.self) { solvent in
+                        Text(solvent.rawValue).tag(solvent)
+                    }
+                }
+            }
+            HStack {
+                Text("仕上がり")
+                
+                Spacer()
+                
+                Picker(selection: .constant(1), label: Text("仕上がり")) {
+                    ForEach(Finish.allCases, id: \.self) { finish in
+                        Text(finish.rawValue).tag(finish)
+                    }
+                }
+            }
+            
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("保存")
+            }
         }
     }
 }

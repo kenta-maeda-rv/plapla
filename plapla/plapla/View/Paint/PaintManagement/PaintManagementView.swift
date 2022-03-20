@@ -11,15 +11,39 @@ import SwiftUI
 struct PaintManagementView: View {
     @StateObject var viewModel: PaintManagementViewModel = PaintManagementViewModel()
     
+    @State var showPaintDetailView = false
+    
     var body: some View {
-        List {
-            ForEach(viewModel.paintDatas) { data in
-                PaintView(colorName: data.colorName,
-                          color: data.color,
-                          brand: data.brand,
-                          type: data.type,
-                          solvent: data.solvent,
-                          finish: data.finish)
+        NavigationView {
+            ScrollView {
+                ForEach(viewModel.paintDatas) { data in
+                    NavigationLink(destination: PaintDetailView(colorName: data.colorName,
+                                                                color: data.color,
+                                                                brand: data.brand,
+                                                                type: data.type,
+                                                                solvent: data.solvent,
+                                                                finish: data.finish)) {
+                        PaintView(colorName: data.colorName,
+                                  color: data.color,
+                                  brand: data.brand,
+                                  type: data.type,
+                                  solvent: data.solvent,
+                                  finish: data.finish)
+                    }
+                }
+            }
+            .navigationTitle("塗料管理")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        showPaintDetailView = true
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showPaintDetailView) {
+                PaintAddView()
             }
         }
     }

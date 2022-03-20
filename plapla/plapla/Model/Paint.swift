@@ -28,7 +28,7 @@ struct Paint: Identifiable {
 }
 
 /// 塗料カラー
-enum PaintColor {
+enum PaintColor: CaseIterable {
     /// レッド
     case red
     /// オレンジ
@@ -134,89 +134,89 @@ enum PaintColor {
 }
 
 /// ブランド
-enum PaintBrand {
+enum PaintBrand: String, Hashable, CaseIterable {
     /// タミヤアクリルミニ
-    static let tamiyaAcrylicMini = "タミヤアクリルミニ"
+    case tamiyaAcrylicMini = "タミヤアクリルミニ"
     /// タミヤラッカー
-    static let tamiyalacquer = "タミヤラッカー"
+    case tamiyalacquer = "タミヤラッカー"
     /// タミヤエナメル
-    static let tamiyaEnamel = "タミヤエナメル"
+    case tamiyaEnamel = "タミヤエナメル"
     /// Mr.カラー
-    static let mrColor = "Mr.カラー"
+    case mrColor = "Mr.カラー"
     /// ガンダムカラー
-    static let gundamColor = "ガンダムカラー"
+    case gundamColor = "ガンダムカラー"
     /// ガンダムマーカー
-    static let gundamMarker = "ガンダムマーカー"
+    case gundamMarker = "ガンダムマーカー"
     /// 水性ホビーカラー
-    static let aqueousHobbyColor = "水性ホビーカラー"
+    case aqueousHobbyColor = "水性ホビーカラー"
     /// アクリジョン
-    static let acrysion = "アクリジョン"
+    case acrysion = "アクリジョン"
     /// ガイアカラー
-    static let gaiaColor = "ガイアカラー"
+    case gaiaColor = "ガイアカラー"
     /// HJモデラーズ
-    static let hjModelers = "HJモデラーズ"
+    case hjModelers = "HJモデラーズ"
     /// ファレホ
-    static let farejo = "ファレホ"
+    case farejo = "ファレホ"
     /// MMP
-    static let MMP = "MMP"
+    case MMP = "MMP"
     /// モデルマスター
-    static let modelMaster = "モデルマスター"
+    case modelMaster = "モデルマスター"
     /// Vカラー
-    static let vColor = "Vカラー"
+    case vColor = "Vカラー"
     /// ボーンペイント
-    static let bonePaint = "ボーンペイント"
+    case bonePaint = "ボーンペイント"
 }
 
 /// タイプ
-enum PaintType {
+enum PaintType: String, Hashable, CaseIterable {
     /// ビン・ボトル
-    static let bottle = "ビン・ボトル"
+    case bottle = "ビン・ボトル"
     /// 缶スプレー
-    static let spray = "缶スプレー"
+    case spray = "缶スプレー"
     /// ペンタイプ
-    static let pen = "ペン"
+    case pen = "ペン"
     /// 溶剤
-    static let solvent = "溶剤"
+    case solvent = "溶剤"
     /// 添加物
-    static let additive = "添加物"
+    case additive = "添加物"
     /// ウェザリング用塗料
-    static let weathering = "ウェザリング用"
+    case weathering = "ウェザリング用"
     /// 情景用塗料
-    static let scenes = "情景用"
+    case scenes = "情景用"
     /// スミ入れ用塗料
-    static let sumi = "スミ入れ用"
+    case sumi = "スミ入れ用"
 }
 
 /// 溶剤
-enum Solvent {
+enum Solvent: String, Hashable, CaseIterable {
     /// 水性
-    static let aqueous = "水性"
+    case aqueous = "水性"
     /// 水性アクリル
-    static let aqueousAcrylic = "水性アクリル"
+    case aqueousAcrylic = "水性アクリル"
     /// ラッカー
-    static let lacquer = "ラッカー"
+    case lacquer = "ラッカー"
     /// エナメル
-    static let enamel = "エナメル"
+    case enamel = "エナメル"
     /// アルコール
-    static let alcohol = "アルコール"
+    case alcohol = "アルコール"
 }
 
 /// 仕上がり
-enum Finish {
+enum Finish: String, Hashable, CaseIterable {
     /// 光沢
-    static let gloss = "光沢"
+    case gloss = "光沢"
     /// 半光沢
-    static let semiGloss = "半光沢"
+    case semiGloss = "半光沢"
     /// つや消し
-    static let matte = "つや消し"
+    case matte = "つや消し"
     /// メタリックカラー
-    static let metallicColor = "メタリックカラー"
+    case metallicColor = "メタリックカラー"
     /// クリアカラー
-    static let clearColor = "クリアカラー"
+    case clearColor = "クリアカラー"
     /// パール・偏光カラー
-    static let polarizedColor = "パール・偏光カラー"
+    case polarizedColor = "パール・偏光カラー"
     /// 蛍光・蓄光カラー
-    static let luminousColor = "蛍光・蓄光カラー"
+    case luminousColor = "蛍光・蓄光カラー"
     /// サーフェイサー
-    static let surfacer = "サーフェイサー"
+    case surfacer = "サーフェイサー"
 }

@@ -13,17 +13,17 @@ class PaintManagementViewModel: ObservableObject {
     @Published var paintDatas:[Paint] = [
         Paint(colorName: PaintColor.gray.colorString,
               color: PaintColor.gray.color,
-              brand: PaintBrand.gaiaColor,
-              type: PaintType.solvent,
-              solvent: Solvent.alcohol,
-              finish: Finish.clearColor),
+              brand: PaintBrand.gaiaColor.rawValue,
+              type: PaintType.solvent.rawValue,
+              solvent: Solvent.alcohol.rawValue,
+              finish: Finish.clearColor.rawValue),
         
         Paint(colorName: PaintColor.green.colorString,
               color: PaintColor.green.color,
-              brand: PaintBrand.MMP,
-              type: PaintType.bottle,
-              solvent: Solvent.lacquer,
-              finish: Finish.luminousColor)
+              brand: PaintBrand.MMP.rawValue,
+              type: PaintType.bottle.rawValue,
+              solvent: Solvent.lacquer.rawValue,
+              finish: Finish.luminousColor.rawValue)
     
     ]
 }
