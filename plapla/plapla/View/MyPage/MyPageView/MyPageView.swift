@@ -20,6 +20,7 @@ struct MyPageView: View {
                 })
                 
                 Section(content: {
+                    Text("お知らせ")
                     Text("問い合わせ")
                     Text("レビュー")
                     Text("ライセンス")

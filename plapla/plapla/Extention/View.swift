@@ -21,5 +21,17 @@ extension View {
         self
             .frame(maxWidth: .infinity, alignment: .center)
     }
+    func vTop() -> some View {
+        self
+            .frame(maxHeight: .infinity, alignment: .top)
+    }
+    func vBottom() -> some View {
+        self
+            .frame(maxHeight: .infinity, alignment: .bottom)
+    }
+    func vCenter() -> some View {
+        self
+            .frame(maxHeight: .infinity, alignment: .center)
+    }
     
 }

@@ -11,35 +11,28 @@ struct HomeView: View {
     @StateObject var viewModel: HomeViewModel = HomeViewModel()
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            
-            LazyVStack(spacing: 15, pinnedViews: [.sectionHeaders]) {
-                
-                Section {
-                    
-                    CardsView()
-                    ContentAddButtonView()
-                } header: {
-                    
-                    HeaderView()
-                    
+        NavigationView{
+            ZStack {
+                ScrollViewReader { scrollView in
+                    ScrollView(.vertical, showsIndicators: false) {
+                        LazyVStack(spacing: 15) {
+                            
+                            Section {
+                                CardsView()
+                                
+                            }
+                        }
+                    }
+                    .onAppear {
+                        scrollView.scrollTo(2, anchor: .center)
+                    }
                 }
+                ContentAddButtonView()
+                    .hTrailing()
+                    .vBottom()
             }
+            .navigationTitle("タイムライン")
         }
-    }
-    
-    func HeaderView()-> some View{
-        HStack(spacing: 10) {
-            
-            VStack(alignment: .leading, spacing: 10) {
-                
-                Text("Titile")
-                    .font(.largeTitle.bold())
-                
-            }
-            .hLeading()
-        }
-        .padding()
     }
     
     func CardsView() -> some View {
@@ -73,15 +66,17 @@ struct HomeView: View {
                 
                 HStack(alignment: .top, spacing: 10) {
                     
-                    VStack(alignment: .leading, spacing: 12) {
-                        
-                        Text(content.contentTitle)
-                        Text(content.contentDrscription)
-                            .font(.callout)
-                            .foregroundColor(.secondary)
-                        
-                    }
+                    Text(content.contentTitle)
+                    Text(content.contentDrscription)
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                    
+                    Spacer()
                 }
+                
+                Image(uiImage: (UIImage(named: "create") ?? UIImage(systemName: "plus"))!)
+                    .resizable()
+                    .frame(height: 200)
             }
             .padding()
             .hLeading()
@@ -96,7 +91,7 @@ struct HomeView: View {
     struct ContentAddButtonView: View {
         @State var showContentAddView = false
         
-        let circleWidth: CGFloat = 100
+        let circleWidth: CGFloat = 80
         
         var body: some View {
             VStack() {
@@ -109,6 +104,7 @@ struct HomeView: View {
                         .frame(width: circleWidth,
                                height: circleWidth,
                                alignment: .center)
+                        .padding(20)
                     
                 }.sheet(isPresented: $showContentAddView) {
                     
