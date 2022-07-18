@@ -38,9 +38,9 @@ struct HomeView: View {
     func CardsView() -> some View {
         LazyVStack {
             
-//            ForEach(viewModel.contents) { content in
-//                CardView(content: content)
-//            }
+            ForEach(viewModel.contents, id: \.self) { content in
+                CardView(content: content)
+            }
             
         }
     }
@@ -67,7 +67,7 @@ struct HomeView: View {
                 HStack(alignment: .top, spacing: 10) {
                     
                     Text(content.contentTitle!)
-                    Text(content.contentDrscription!)
+                    Text(content.contentDiscription!)
                         .font(.callout)
                         .foregroundColor(.secondary)
                     

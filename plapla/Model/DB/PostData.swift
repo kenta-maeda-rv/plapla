@@ -25,7 +25,7 @@ class PostData: Object {
     // 工程
     @objc dynamic var process: String?
     
-    init(
+    public convenience init(
         postId: String,
         contentId: String,
         postTitle: String,
@@ -34,6 +34,8 @@ class PostData: Object {
         ImageUrl: String,
         process: Process
     ) {
+        self.init()
+        
         self.postId = postId
         self.contentId = contentId
         self.postTitle = postTitle

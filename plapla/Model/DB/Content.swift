@@ -16,22 +16,22 @@ class Content: Object {
     // タイトル
     @objc dynamic var contentTitle: String?
     // 内容
-    @objc dynamic var contentDrscription: String?
+    @objc dynamic var contentDiscription: String?
     // 画像
     @objc dynamic var contentImageUrl: String?
     // 最終編集日
     @objc dynamic var lastEditDate: Date?
     
-    init(
-        contentId: String,
-        contentTitle: String,
-        contentDrscription: String,
+    public convenience init(
+        contentTitle: String?,
+        contentDiscription: String?,
         contentImageUrl: String?,
-        lastEditDate: Date
+        lastEditDate: Date?
     ) {
-        self.contentId = contentId
+        self.init()
+        
         self.contentTitle = contentTitle
-        self.contentDrscription = contentDrscription
+        self.contentDiscription = contentDiscription
         self.contentImageUrl = contentImageUrl
         self.lastEditDate = lastEditDate
     }

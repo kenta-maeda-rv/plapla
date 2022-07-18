@@ -19,19 +19,16 @@ extension RepogitoryManager {
     func saveContent(
         contentId: String,
         contentTitle: String,
-        contentDrscription: String,
+        contentDiscription: String,
         contentImageUrl: String,
-        lastEditDate: Date,
-        postData: [PostData]?
-        
+        lastEditDate: Date
     ) {
         let realm = try? realmPermanentlyDb()
         
         try? realm?.write {
             let db = Content(
-                contentId: contentId,
                 contentTitle: contentTitle,
-                contentDrscription: contentDrscription,
+                contentDiscription: contentDiscription,
                 contentImageUrl: contentImageUrl,
                 lastEditDate: lastEditDate
             )

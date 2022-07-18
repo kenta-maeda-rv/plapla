@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 class HomeViewModel: ObservableObject {
     
@@ -16,4 +17,19 @@ class HomeViewModel: ObservableObject {
 //        Content(contentTitle: Process.assembly.processString, contentDrscription: "完成", lastEditDate: Date(),postData: [])
 //    
     ]
+    init() {
+        self.initScreenData()
+    }
+    
+    func initScreenData() {
+        guard let contentDatas = RepogitoryManager.shared.contentPermanentlyDb else {
+            print("DB取得に失敗")
+            return
+        }
+        let data = contentDatas.map{Content(contentTitle: $0.contentTitle,
+                                            contentDiscription: $0.contentDiscription,
+                                            contentImageUrl: $0.contentImageUrl,
+                                            lastEditDate: $0.lastEditDate)}
+        self.contents.append(contentsOf: data)
+    }
 }

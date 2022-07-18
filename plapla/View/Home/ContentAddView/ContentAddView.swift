@@ -65,6 +65,7 @@ struct ContentAddView: View {
                     .background(Color.gray)
                 
                 Button(action: {
+                    self.viewModel.tapAddButton()
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("追加")
