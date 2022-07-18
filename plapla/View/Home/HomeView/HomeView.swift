@@ -66,8 +66,8 @@ struct HomeView: View {
                 
                 HStack(alignment: .top, spacing: 10) {
                     
-                    Text(content.contentTitle)
-                    Text(content.contentDrscription)
+                    Text(content.contentTitle!)
+                    Text(content.contentDrscription!)
                         .font(.callout)
                         .foregroundColor(.secondary)
                     
