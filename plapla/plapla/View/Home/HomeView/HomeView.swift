@@ -38,9 +38,9 @@ struct HomeView: View {
     func CardsView() -> some View {
         LazyVStack {
             
-            ForEach(viewModel.contents) { content in
-                CardView(content: content)
-            }
+//            ForEach(viewModel.contents) { content in
+//                CardView(content: content)
+//            }
             
         }
     }

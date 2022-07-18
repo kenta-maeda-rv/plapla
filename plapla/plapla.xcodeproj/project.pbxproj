@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,7 @@
 		8E88ADEBD4884365756F5E93 /* PaintDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B653F3F0F0362DCC057D6DA /* PaintDetailView.swift */; };
 		90C28C01756203B3B8C4C8D4 /* PaintManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B235AB7C30562D8E639B0 /* PaintManagementView.swift */; };
 		D696971D07608E953DD4B07E /* PaintDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926ED817EA121648D6030726 /* PaintDetailViewModel.swift */; };
+		D9FD54FC29163497ABA31115 /* Pods_plapla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C2D28E4844C61E5941BAE9 /* Pods_plapla.framework */; };
 		DA310C61F5CF4D207B075F91 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2860D959EB31220C1065D /* NotificationView.swift */; };
 		E62FABFE40598AF4D6E2EE97 /* PaintManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126CDD4B33D7DFABF699D6B6 /* PaintManagementViewModel.swift */; };
 		E6E343106B5831380FDFA91C /* PaintAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C50050143C1C6ED3E9C321 /* PaintAddViewModel.swift */; };
@@ -43,6 +44,7 @@
 		126CDD4B33D7DFABF699D6B6 /* PaintManagementViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintManagementViewModel.swift; sourceTree = "<group>"; };
 		20B2DFF71D12EA2E7FB6FEEF /* PaintAddView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintAddView.swift; sourceTree = "<group>"; };
 		3B653F3F0F0362DCC057D6DA /* PaintDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintDetailView.swift; sourceTree = "<group>"; };
+		44C2D28E4844C61E5941BAE9 /* Pods_plapla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plapla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF2860D959EB31220C1065D /* NotificationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6E240A1227DF3C6E00D76C14 /* ContentAddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAddViewModel.swift; sourceTree = "<group>"; };
 		6E240A1427DF3C7F00D76C14 /* ContentAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAddView.swift; sourceTree = "<group>"; };
@@ -70,7 +72,9 @@
 		6EFAB278278C1AAB00D1C9E5 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		74C50050143C1C6ED3E9C321 /* PaintAddViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintAddViewModel.swift; sourceTree = "<group>"; };
 		926ED817EA121648D6030726 /* PaintDetailViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintDetailViewModel.swift; sourceTree = "<group>"; };
+		A5EB392D7657432B02709ACF /* Pods-plapla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plapla.release.xcconfig"; path = "Target Support Files/Pods-plapla/Pods-plapla.release.xcconfig"; sourceTree = "<group>"; };
 		A85CF320B9C5D7861002D554 /* NotificationViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		E4DB3BFEAC355809FBE209AA /* Pods-plapla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plapla.debug.xcconfig"; path = "Target Support Files/Pods-plapla/Pods-plapla.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0B235AB7C30562D8E639B0 /* PaintManagementView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintManagementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,12 +83,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FD54FC29163497ABA31115 /* Pods_plapla.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18B41DDC9DE024A8C156C8BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44C2D28E4844C61E5941BAE9 /* Pods_plapla.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1A188B138BB041F5D7E7C826 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,11 +161,21 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
+		6E4F55D1285DA49D00469B41 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				6EFAB274278C17B700D1C9E5 /* Content.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 		6E93036B278AAC5F006025AB = {
 			isa = PBXGroup;
 			children = (
 				6E930376278AAC5F006025AB /* plapla */,
 				6E930375278AAC5F006025AB /* Products */,
+				CA741BCEA17830C2130B8400 /* Pods */,
+				18B41DDC9DE024A8C156C8BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -267,8 +290,8 @@
 		6EFAB273278C175F00D1C9E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6E4F55D1285DA49D00469B41 /* DB */,
 				6E240A2027DF803100D76C14 /* BoardingScreen.swift */,
-				6EFAB274278C17B700D1C9E5 /* Content.swift */,
 				6EF1A49627E079BC00F5CD38 /* Paint.swift */,
 			);
 			path = Model;
@@ -292,6 +315,15 @@
 			path = PaintManagement;
 			sourceTree = "<group>";
 		};
+		CA741BCEA17830C2130B8400 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB3BFEAC355809FBE209AA /* Pods-plapla.debug.xcconfig */,
+				A5EB392D7657432B02709ACF /* Pods-plapla.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,9 +331,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E930383278AAC60006025AB /* Build configuration list for PBXNativeTarget "plapla" */;
 			buildPhases = (
+				5343E594ABBC7D19E81BA23C /* [CP] Check Pods Manifest.lock */,
 				6E930370278AAC5F006025AB /* Sources */,
 				6E930371278AAC5F006025AB /* Frameworks */,
 				6E930372278AAC5F006025AB /* Resources */,
+				E87D13724FE84F26F700E1E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -355,6 +389,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5343E594ABBC7D19E81BA23C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-plapla-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E87D13724FE84F26F700E1E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-plapla/Pods-plapla-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-plapla/Pods-plapla-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-plapla/Pods-plapla-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E930370278AAC5F006025AB /* Sources */ = {
@@ -513,6 +589,7 @@
 		};
 		6E930384278AAC60006025AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4DB3BFEAC355809FBE209AA /* Pods-plapla.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -534,6 +611,7 @@
 		};
 		6E930385278AAC60006025AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5EB392D7657432B02709ACF /* Pods-plapla.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

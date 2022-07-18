@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct {{ module_info.name }}View: View {
-    @StateObject var viewModel: {{ module_info.name }}ViewModel = {{ module_info.name }}ViewModel()
+    @StateObject var {{ module_info.name }}: {{ module_info.name }}ViewModel = {{ module_info.name }}ViewModel()
     
     var body: some View {
         VStack {
