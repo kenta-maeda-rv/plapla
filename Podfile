@@ -5,7 +5,12 @@ target 'plapla' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-　pod'
+  
+  pod 'RealmSwift'
+  pod 'SwiftGen'
+  pod 'SwiftFormat'
+  pod 'SwiftLint'
+
   # Pods for plapla
 
 end
