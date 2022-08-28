@@ -14,6 +14,7 @@ struct ContentAddView: View {
     @StateObject var viewModel: ContentAddViewModel = ContentAddViewModel()
     
     @State var titleText = ""
+    @State var discriptionText = ""
     
     @State var showAlert: Bool = false
     @State var showImagePicker: Bool = false
@@ -63,9 +64,14 @@ struct ContentAddView: View {
                 TextField("contentTitle", text: $titleText)
                     .padding(30)
                     .background(Color.gray)
+                TextField("discription", text: $discriptionText)
+                    .padding(30)
+                    .background(Color.gray)
                 
                 Button(action: {
-                    self.viewModel.tapAddButton()
+                    self.viewModel.tapAddButton(title: titleText,
+                                                discription: discriptionText,
+                                                image: imageSelected)
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("追加")

@@ -12,7 +12,7 @@ import RealmSwift
 /// コンテンツ
 class Content: Object {
     // コンテンツId
-    @objc dynamic var contentId = UUID().uuidString
+    @objc dynamic var contentId: String?
     // タイトル
     @objc dynamic var contentTitle: String?
     // 内容
@@ -23,6 +23,7 @@ class Content: Object {
     @objc dynamic var lastEditDate: Date?
     
     public convenience init(
+        contentId: String?,
         contentTitle: String?,
         contentDiscription: String?,
         contentImageUrl: String?,
@@ -30,6 +31,7 @@ class Content: Object {
     ) {
         self.init()
         
+        self.contentId = contentId
         self.contentTitle = contentTitle
         self.contentDiscription = contentDiscription
         self.contentImageUrl = contentImageUrl

@@ -23,13 +23,38 @@ class HomeViewModel: ObservableObject {
     
     func initScreenData() {
         guard let contentDatas = RepogitoryManager.shared.contentPermanentlyDb else {
-            print("DB取得に失敗")
+            logger.debug("DB取得に失敗")
             return
         }
-        let data = contentDatas.map{Content(contentTitle: $0.contentTitle,
+        
+        let data = contentDatas.map{Content(contentId: $0.contentId,
+                                            contentTitle: $0.contentTitle,
                                             contentDiscription: $0.contentDiscription,
                                             contentImageUrl: $0.contentImageUrl,
                                             lastEditDate: $0.lastEditDate)}
+        print("取得したコンテンツデータ\(data)")
         self.contents.append(contentsOf: data)
+    }
+    
+    func getImage(contentId: String?) -> UIImage? {
+        guard let contentId = contentId else {
+            print("contentIdが存在しない")
+            return nil
+        }
+        
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first ?? ""
+        let filePath = path + "/" + "\(contentId).png"
+        print("検索するfilePath:\(filePath)")
+        if FileManager.default.fileExists(atPath: filePath) {
+            if let imageData = UIImage(contentsOfFile: filePath) {
+                return imageData
+            }
+            else {
+                print("画像ファイルの読み込みに失敗")
+            }
+        } else {
+            print("画像ファイルが存在しない")
+        }
+        return nil
     }
 }

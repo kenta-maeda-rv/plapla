@@ -14,25 +14,57 @@ extension RepogitoryManager {
     var contentPermanentlyDb: Results<Content>? {
         return (try? realmPermanentlyDb())?.objects(Content.self)
     }
-    
+    // ドキュメントディレクトリの「パス」（String型）定義
+    var filePath: String {
+        return  NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+    }
     ///  コンテンツの保存
     func saveContent(
-        contentId: String,
         contentTitle: String,
         contentDiscription: String,
-        contentImageUrl: String,
+        contentImage: UIImage,
         lastEditDate: Date
     ) {
         let realm = try? realmPermanentlyDb()
         
-        try? realm?.write {
-            let db = Content(
-                contentTitle: contentTitle,
-                contentDiscription: contentDiscription,
-                contentImageUrl: contentImageUrl,
-                lastEditDate: lastEditDate
-            )
-            realm?.add(db)
+        let contentId = UUID().uuidString
+        
+        let path = createLocalDataFile(contentId: contentId)
+        
+        do {
+            try realm?.write {
+                let db = Content(
+                    contentId: contentId,
+                    contentTitle: contentTitle,
+                    contentDiscription: contentDiscription,
+                    contentImageUrl: path.path,
+                    lastEditDate: lastEditDate
+                )
+                realm?.add(db)
+            }
+            logger.debug("コンテンツの保存に成功")
+        } catch {
+            logger.error("コンテンツの保存に失敗")
         }
+        //pngで保存する場合
+        let pngImageData = contentImage.pngData()
+        do {
+            try pngImageData!.write(to: path)
+            logger.debug("画像の保存に成功")
+        } catch {
+            logger.error("画像の保存に失敗")
+        }
+    }
+    
+    //保存するためのパスを作成する
+    func createLocalDataFile(contentId: String) -> URL {
+        // 作成するテキストファイルの名前
+        let fileName = "\(contentId).png"
+        // DocumentディレクトリのfileURLを取得
+        let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
+        let path = documentDirectoryFileURL.appendingPathComponent(fileName)
+        
+        return path
     }
 }

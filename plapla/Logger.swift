@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import os
+import os.log
 
 /// ログ出力用インスタンス
 let logger = Logger()

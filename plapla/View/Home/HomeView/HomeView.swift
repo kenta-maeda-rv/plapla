@@ -74,7 +74,7 @@ struct HomeView: View {
                     Spacer()
                 }
                 
-                Image(uiImage: (UIImage(named: "create") ?? UIImage(systemName: "plus"))!)
+                Image(uiImage: ((self.viewModel.getImage(contentId: content.contentId) ?? UIImage(systemName: "plus"))!))
                     .resizable()
                     .frame(height: 200)
             }

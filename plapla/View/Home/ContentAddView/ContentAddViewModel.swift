@@ -8,11 +8,15 @@
 import SwiftUI
 
 class ContentAddViewModel: ObservableObject {
-    func tapAddButton() {
-        RepogitoryManager.shared.saveContent(contentId: "",
-                                             contentTitle: "hogehogheog",
-                                             contentDiscription: "huggehguehguehg",
-                                             contentImageUrl: "",
+    
+    func tapAddButton(
+        title: String,
+        discription: String,
+        image: UIImage
+    ) {
+        RepogitoryManager.shared.saveContent(contentTitle: title,
+                                             contentDiscription: discription,
+                                             contentImage: image,
                                              lastEditDate: Date())
     }
 }
