@@ -10,7 +10,10 @@ import SwiftUI
 struct LibraryView: View {
     @StateObject var viewModel: LibraryViewModel = LibraryViewModel()
     
+    @State var showContentAddView = false
     @State var showContentDetailView = false
+    
+    @State var contentId = ""
     
     var body: some View {
         NavigationView{
@@ -20,20 +23,15 @@ struct LibraryView: View {
                           pinnedViews: [.sectionHeaders])
                 {
                     Section {
-                        ForEach(0..<10) { image in
+                        ForEach(viewModel.contents, id: \.self) { contents in
                             Button(action: {
+                                self.contentId = contents.contentId!
                                 self.showContentDetailView.toggle()
                             }) {
-                                Image(systemName: "folder")
-                                    .resizable()
-                                    .frame(width: 150, height: 150, alignment: .center)
-                                    .background(
-                                        Color.gray
-                                    )
-                                    .cornerRadius(15)
+                                ContentCardView(contentId: contents.contentId!)
                             }
                             .sheet(isPresented: $showContentDetailView) {
-                                ContentDetailView()
+                                ContentDetailView(contentId: contents.contentId!)
                             }
                             
                         }
@@ -42,6 +40,30 @@ struct LibraryView: View {
             }
             .padding()
             .navigationTitle("LibraryView")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        showContentAddView = true
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showContentAddView) {
+                ContentAddView(contentId: contentId)
+            }
+        }
+    }
+    
+    func ContentCardView(contentId: String) -> some View {
+        VStack {
+            Image(uiImage: ((ScreenUtil.getImage(contentId: contentId) ?? UIImage(named: "create"))!))
+                .resizable()
+                .frame(width: 150, height: 150, alignment: .center)
+                .background(
+                    Color.gray
+                )
+                .cornerRadius(15)
         }
     }
 }
@@ -51,3 +73,4 @@ struct LibraryView_Previews: PreviewProvider {
         LibraryView()
     }
 }
+

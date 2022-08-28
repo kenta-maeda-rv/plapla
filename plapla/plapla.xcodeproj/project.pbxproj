@@ -28,6 +28,11 @@
 		6E9BCF61278C017A00074C64 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BCF60278C017A00074C64 /* HomeView.swift */; };
 		6E9BCF63278C01F700074C64 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BCF62278C01F700074C64 /* LibraryView.swift */; };
 		6E9BCF65278C020300074C64 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BCF64278C020300074C64 /* MyPageView.swift */; };
+		6EC57A1A28BB96BE0025312D /* TimeLineVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC57A1928BB96BE0025312D /* TimeLineVIew.swift */; };
+		6EC57A1C28BB98630025312D /* ScreenUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC57A1B28BB98630025312D /* ScreenUtil.swift */; };
+		6EC57A1F28BBB60E0025312D /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC57A1E28BBB60E0025312D /* PostView.swift */; };
+		6EC57A2128BBB61C0025312D /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC57A2028BBB61C0025312D /* PostViewModel.swift */; };
+		6EC57A2328BBB6640025312D /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC57A2228BBB6640025312D /* PostImageView.swift */; };
 		6ECDFC66279453DC00B1E35A /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDFC65279453DC00B1E35A /* LibraryViewModel.swift */; };
 		6ECDFC682794617200B1E35A /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDFC672794617100B1E35A /* MyPageViewModel.swift */; };
 		6EE3B3F927E81CAD00698A7B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE3B3F827E81CAC00698A7B /* ImagePicker.swift */; };
@@ -71,6 +76,11 @@
 		6E9BCF60278C017A00074C64 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6E9BCF62278C01F700074C64 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		6E9BCF64278C020300074C64 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		6EC57A1928BB96BE0025312D /* TimeLineVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineVIew.swift; sourceTree = "<group>"; };
+		6EC57A1B28BB98630025312D /* ScreenUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenUtil.swift; sourceTree = "<group>"; };
+		6EC57A1E28BBB60E0025312D /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		6EC57A2028BBB61C0025312D /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		6EC57A2228BBB6640025312D /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		6ECDFC65279453DC00B1E35A /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		6ECDFC672794617100B1E35A /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
 		6EE3B3F827E81CAC00698A7B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -156,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				6ECDFC5F2794054600B1E35A /* HomeView */,
-				6E240A1127DF3C2F00D76C14 /* ContentAddView */,
+				6EC57A1D28BBB5F20025312D /* PostView */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -165,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				6ECDFC62279405AB00B1E35A /* LibraryView */,
+				6E240A1127DF3C2F00D76C14 /* ContentAddView */,
 				6E240A1727DF7A8B00D76C14 /* ContentDetailView */,
 			);
 			path = Library;
@@ -229,6 +240,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6EC57A1828BB96920025312D /* Cummon */ = {
+			isa = PBXGroup;
+			children = (
+				6EC57A1928BB96BE0025312D /* TimeLineVIew.swift */,
+				6EC57A2228BBB6640025312D /* PostImageView.swift */,
+			);
+			path = Cummon;
+			sourceTree = "<group>";
+		};
+		6EC57A1D28BBB5F20025312D /* PostView */ = {
+			isa = PBXGroup;
+			children = (
+				6EC57A1E28BBB60E0025312D /* PostView.swift */,
+				6EC57A2028BBB61C0025312D /* PostViewModel.swift */,
+			);
+			path = PostView;
+			sourceTree = "<group>";
+		};
 		6ECDFC5F2794054600B1E35A /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +270,7 @@
 		6ECDFC602794056000B1E35A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6EC57A1828BB96920025312D /* Cummon */,
 				6E240A1E27DF803100D76C14 /* OnBoarding */,
 				6ECDFC612794058300B1E35A /* HomeTabView */,
 				6E240A1C27DF7DFB00D76C14 /* Home */,
@@ -312,6 +342,7 @@
 				6E4F55D1285DA49D00469B41 /* DB */,
 				6E240A2027DF803100D76C14 /* BoardingScreen.swift */,
 				6EF1A49627E079BC00F5CD38 /* Paint.swift */,
+				6EC57A1B28BB98630025312D /* ScreenUtil.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E240A2227DF803100D76C14 /* OnBoargingView.swift in Sources */,
+				6EC57A1C28BB98630025312D /* ScreenUtil.swift in Sources */,
 				6E9BCF5F278BFF1800074C64 /* HomeTabView.swift in Sources */,
 				6EF1A49727E079BC00F5CD38 /* Paint.swift in Sources */,
 				6E240A1527DF3C7F00D76C14 /* ContentAddView.swift in Sources */,
@@ -479,9 +511,13 @@
 				6E1E7837288586CB00EFA596 /* StorageContent.swift in Sources */,
 				6EE3B3F927E81CAD00698A7B /* ImagePicker.swift in Sources */,
 				6E240A2327DF803100D76C14 /* BoardingScreen.swift in Sources */,
+				6EC57A2128BBB61C0025312D /* PostViewModel.swift in Sources */,
 				6E9BCF65278C020300074C64 /* MyPageView.swift in Sources */,
 				DA310C61F5CF4D207B075F91 /* NotificationView.swift in Sources */,
 				468A6F60C397A21BF64CABA1 /* NotificationViewModel.swift in Sources */,
+				6EC57A1A28BB96BE0025312D /* TimeLineVIew.swift in Sources */,
+				6EC57A1F28BBB60E0025312D /* PostView.swift in Sources */,
+				6EC57A2328BBB6640025312D /* PostImageView.swift in Sources */,
 				90C28C01756203B3B8C4C8D4 /* PaintManagementView.swift in Sources */,
 				E62FABFE40598AF4D6E2EE97 /* PaintManagementViewModel.swift in Sources */,
 				8E88ADEBD4884365756F5E93 /* PaintDetailView.swift in Sources */,

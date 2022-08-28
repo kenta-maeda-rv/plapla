@@ -8,16 +8,24 @@
 import SwiftUI
 
 struct ContentDetailView: View {
+    @StateObject var viewModel: ContentDetailViewModel = ContentDetailViewModel()
+    
+    @State var contentId: String
+    @State var postDatas: [PostData] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "camera")
-            Text("ContentDetailView")
+        ZStack {
+            TimeLineVIew(postDatas: $postDatas)
+        }
+        .onAppear {
+            self.postDatas = self.viewModel.getScreenData(contentId: self.contentId)
+            print(self.postDatas)
         }
     }
 }
 
 struct ContentDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentDetailView()
+        ContentDetailView(contentId: "test")
     }
 }

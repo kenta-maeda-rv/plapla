@@ -17,26 +17,41 @@ extension RepogitoryManager {
     
     ///  コンテンツの保存
     func savePostData(
-        postId: String,
         contentId: String,
         postTitle: String,
-        postDrscription: String,
+        postDiscription: String,
         postDate: Date,
-        ImageUrl: String,
+        postImage: UIImage,
         process: Process
     ) {
         let realm = try? realmPermanentlyDb()
         
-        try? realm?.write {
-            let db = PostData(postId: postId,
-                              contentId: contentId,
-                              postTitle: postTitle,
-                              postDrscription: postDrscription,
-                              postDate: postDate,
-                              ImageUrl: ImageUrl,
-                              process: process
-            )
-            realm?.add(db)
+        let postId = UUID().uuidString
+        
+        let path = createLocalDataFile(id: postId)
+        do {
+            try realm?.write {
+                let db = PostData(postId: postId,
+                                  contentId: contentId,
+                                  postTitle: postTitle,
+                                  postDiscription: postDiscription,
+                                  postDate: postDate,
+                                  ImageUrl: path.path,
+                                  process: process.processString
+                )
+                realm?.add(db)
+                logger.debug("投稿の保存に成功")
+            }
+        } catch {
+            logger.error("投稿の保存に失敗")
+        }
+        //pngで保存する場合
+        let pngImageData = postImage.pngData()
+        do {
+            try pngImageData!.write(to: path)
+            logger.debug("画像の保存に成功")
+        } catch {
+            logger.error("画像の保存に失敗")
         }
     }
 }

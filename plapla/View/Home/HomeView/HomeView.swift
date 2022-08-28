@@ -10,24 +10,13 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var viewModel: HomeViewModel = HomeViewModel()
     
+    @State var contentId = ""
+    
     var body: some View {
         NavigationView{
             ZStack {
-                ScrollViewReader { scrollView in
-                    ScrollView(.vertical, showsIndicators: false) {
-                        LazyVStack(spacing: 15) {
-                            
-                            Section {
-                                CardsView()
-                                
-                            }
-                        }
-                    }
-                    .onAppear {
-                        scrollView.scrollTo(2, anchor: .center)
-                    }
-                }
-                ContentAddButtonView()
+//                TimeLineVIew(contents: [])
+                ContentAddButtonView(contentId: $contentId)
                     .hTrailing()
                     .vBottom()
             }
@@ -35,61 +24,11 @@ struct HomeView: View {
         }
     }
     
-    func CardsView() -> some View {
-        LazyVStack {
-            
-            ForEach(viewModel.contents, id: \.self) { content in
-                CardView(content: content)
-            }
-            
-        }
-    }
-    
-    func CardView(content: Content)-> some View {
-        HStack {
-            
-            VStack(spacing: 10) {
-                Circle()
-                    .fill(.black)
-                    .frame(width: 15, height: 15)
-                    .background(
-                        Circle()
-                            .stroke(.black, lineWidth: 1)
-                            .padding(-3)
-                    )
-                Rectangle()
-                    .fill(.black)
-                    .frame(width: 3)
-            }
-            
-            VStack {
-                
-                HStack(alignment: .top, spacing: 10) {
-                    
-                    Text(content.contentTitle!)
-                    Text(content.contentDiscription!)
-                        .font(.callout)
-                        .foregroundColor(.secondary)
-                    
-                    Spacer()
-                }
-                
-                Image(uiImage: ((self.viewModel.getImage(contentId: content.contentId) ?? UIImage(systemName: "plus"))!))
-                    .resizable()
-                    .frame(height: 200)
-            }
-            .padding()
-            .hLeading()
-            .background(
-                Color.gray
-                    .cornerRadius(25)
-            )
-        }
-        .padding()
-    }
     
     struct ContentAddButtonView: View {
         @State var showContentAddView = false
+        
+        @Binding var contentId: String
         
         let circleWidth: CGFloat = 80
         
@@ -108,7 +47,7 @@ struct HomeView: View {
                     
                 }.sheet(isPresented: $showContentAddView) {
                     
-                    ContentAddView()
+                    PostView(contentId: contentId)
                 
                 }
                 

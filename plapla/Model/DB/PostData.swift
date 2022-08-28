@@ -17,7 +17,7 @@ class PostData: Object {
     // 投稿タイトル
     @objc dynamic var postTitle: String?
     // 投稿内容
-    @objc dynamic var postDrscription: String?
+    @objc dynamic var postDiscription: String?
     // 投稿日
     @objc dynamic var postDate: Date?
     // 画像
@@ -29,20 +29,20 @@ class PostData: Object {
         postId: String,
         contentId: String,
         postTitle: String,
-        postDrscription: String,
+        postDiscription: String,
         postDate: Date,
         ImageUrl: String,
-        process: Process
+        process: String
     ) {
         self.init()
         
         self.postId = postId
         self.contentId = contentId
         self.postTitle = postTitle
-        self.postDrscription = postDrscription
+        self.postDiscription = postDiscription
         self.postDate = postDate
         self.ImageUrl = ImageUrl
-        self.process = process.processString
+        self.process = process
     }
 }
 

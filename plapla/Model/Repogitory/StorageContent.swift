@@ -29,7 +29,7 @@ extension RepogitoryManager {
         
         let contentId = UUID().uuidString
         
-        let path = createLocalDataFile(contentId: contentId)
+        let path = createLocalDataFile(id: contentId)
         
         do {
             try realm?.write {
@@ -54,17 +54,5 @@ extension RepogitoryManager {
         } catch {
             logger.error("画像の保存に失敗")
         }
-    }
-    
-    //保存するためのパスを作成する
-    func createLocalDataFile(contentId: String) -> URL {
-        // 作成するテキストファイルの名前
-        let fileName = "\(contentId).png"
-        // DocumentディレクトリのfileURLを取得
-        let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
-        let path = documentDirectoryFileURL.appendingPathComponent(fileName)
-        
-        return path
     }
 }
