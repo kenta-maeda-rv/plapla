@@ -57,7 +57,7 @@ struct LibraryView: View {
     
     func ContentCardView(contentId: String) -> some View {
         VStack {
-            Image(uiImage: ((ScreenUtil.getImage(contentId: contentId) ?? UIImage(named: "create"))!))
+            Image(uiImage: ((ScreenUtil.getImage(id: contentId) ?? UIImage(named: "create"))!))
                 .resizable()
                 .frame(width: 150, height: 150, alignment: .center)
                 .background(

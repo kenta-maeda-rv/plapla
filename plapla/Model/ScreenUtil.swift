@@ -9,15 +9,15 @@ import Foundation
 import UIKit
 
 class ScreenUtil {
-    class func getImage(contentId: String?) -> UIImage? {
-        guard let contentId = contentId else {
+    class func getImage(id: String?) -> UIImage? {
+        guard let id = id else {
             print("contentIdが存在しない")
             return nil
         }
         
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory,
                                                        .userDomainMask, true).first ?? ""
-        let filePath = path + "/" + "\(contentId).png"
+        let filePath = path + "/" + "\(id).png"
         print("検索するfilePath:\(filePath)")
         if FileManager.default.fileExists(atPath: filePath) {
             if let imageData = UIImage(contentsOfFile: filePath) {

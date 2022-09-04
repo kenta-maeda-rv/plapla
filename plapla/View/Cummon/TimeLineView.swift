@@ -68,7 +68,7 @@ struct TimeLineView: View {
                     Spacer()
                 }
                 
-                Image(uiImage: (((ScreenUtil.getImage(contentId: postData.contentId) ?? UIImage(named: "create"))!)))
+                Image(uiImage: (((ScreenUtil.getImage(id: postData.postId) ?? UIImage(named: "create"))!)))
                     .resizable()
                     .frame(height: 200)
             }
