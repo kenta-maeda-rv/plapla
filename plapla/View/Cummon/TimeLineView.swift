@@ -1,5 +1,5 @@
 //
-//  TimeLineVIew.swift
+//  TimeLineView.swift
 //  plapla
 //
 //  Created by 前田 健太 (Maeda Kenta) on 2022/08/28.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TimeLineVIew: View {
+struct TimeLineView: View {
     
     @Binding var postDatas: [PostData]
     
@@ -24,6 +24,7 @@ struct TimeLineVIew: View {
             }
             .onAppear {
                 scrollView.scrollTo(2, anchor: .center)
+                print("TimeLineView表示:\(postDatas)")
             }
         }
     }
@@ -79,5 +80,20 @@ struct TimeLineVIew: View {
             )
         }
         .padding()
+    }
+}
+
+
+struct TimeLineView_Previews: PreviewProvider {
+    @State static var postData:[PostData] = [PostData(postId: "",
+                                                      contentId: "",
+                                                      postTitle: "",
+                                                      postDiscription: "",
+                                                      postDate: Date(),
+                                                      ImageUrl:  "",
+                                                      process: "本組")]
+    
+    static var previews: some View {
+        TimeLineView(postDatas: $postData)
     }
 }

@@ -15,11 +15,11 @@ struct ContentDetailView: View {
     
     var body: some View {
         ZStack {
-            TimeLineVIew(postDatas: $postDatas)
+            TimeLineView(postDatas: $postDatas)
         }
         .onAppear {
             self.postDatas = self.viewModel.getScreenData(contentId: self.contentId)
-            print(self.postDatas)
+            print("ContentDetailView表示時：\(self.postDatas)")
         }
     }
 }
