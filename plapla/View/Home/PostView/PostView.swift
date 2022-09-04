@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct PostView: View {
+    @AppStorage("contentId") var contentId = ""
     @Environment(\.presentationMode) var presentationMode
     
     @StateObject var viewModel: PostViewModel = PostViewModel()
     
-    @State var contentId: String
     @State var titleText = ""
     @State var discriptionText = ""
     @State var imageSelected: UIImage = UIImage(systemName: "camera")!
@@ -62,6 +62,6 @@ struct PostView: View {
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView(contentId: "test")
+        PostView()
     }
 }

@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct ContentDetailView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @AppStorage("contentId") var contentId = ""
     @StateObject var viewModel: ContentDetailViewModel = ContentDetailViewModel()
     
-    @State var contentId: String
-    @State var postDatas: [PostData] = []
+    @State var postDatas: [PostData] = [PostData(postId: "",
+                                                 contentId: "",
+                                                 postTitle: "",
+                                                 postDiscription: "",
+                                                 postDate: Date(),
+                                                 ImageUrl:  "",
+                                                 process: "")]
     
     var body: some View {
-        ZStack {
+        VStack {
+            Button(action: {
+                contentId = contentId
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("TOPに表示")
+            }
             TimeLineView(postDatas: $postDatas)
         }
         .onAppear {
@@ -26,6 +39,6 @@ struct ContentDetailView: View {
 
 struct ContentDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentDetailView(contentId: "test")
+        ContentDetailView()
     }
 }

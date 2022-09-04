@@ -8,27 +8,35 @@
 import SwiftUI
 
 struct HomeView: View {
+    @AppStorage("contentId") var contentId = ""
     @StateObject var viewModel: HomeViewModel = HomeViewModel()
     
-    @State var contentId = ""
-    
+    @State var postDatas: [PostData] = [PostData(postId: "",
+                                                 contentId: "",
+                                                 postTitle: "",
+                                                 postDiscription: "",
+                                                 postDate: Date(),
+                                                 ImageUrl:  "",
+                                                 process: "")]
     var body: some View {
         NavigationView{
             ZStack {
-//                TimeLineVIew(contents: [])
-                ContentAddButtonView(contentId: $contentId)
+                TimeLineView(postDatas: $postDatas)
+                ContentAddButtonView()
                     .hTrailing()
                     .vBottom()
             }
-            .navigationTitle("タイムライン")
+            .navigationTitle(contentId)
+            .onAppear {
+                self.postDatas = self.viewModel.getScreenData(contentId: contentId)
+                print("HomeView表示時：\(self.postDatas)")
+            }
         }
     }
     
     
     struct ContentAddButtonView: View {
         @State var showContentAddView = false
-        
-        @Binding var contentId: String
         
         let circleWidth: CGFloat = 80
         
@@ -47,7 +55,7 @@ struct HomeView: View {
                     
                 }.sheet(isPresented: $showContentAddView) {
                     
-                    PostView(contentId: contentId)
+                    PostView()
                 
                 }
                 
