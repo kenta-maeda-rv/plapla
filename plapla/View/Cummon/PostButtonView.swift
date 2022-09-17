@@ -10,6 +10,7 @@ import SwiftUI
 struct PostButtonView: View {
     @State var showContentAddView = false
     
+    let contentId: String
     let circleWidth: CGFloat = 80
     
     var body: some View {
@@ -27,7 +28,7 @@ struct PostButtonView: View {
                 
             }.sheet(isPresented: $showContentAddView) {
                 
-                PostView()
+                PostView(contentId: contentId)
             
             }
             
@@ -37,6 +38,6 @@ struct PostButtonView: View {
 
 struct ContentAddButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        PostButtonView()
+        PostButtonView(contentId: "")
     }
 }

@@ -18,28 +18,21 @@ struct LibraryView: View {
     var body: some View {
         NavigationView{
             ScrollView(.vertical) {
-                LazyVGrid(columns: viewModel.columns,
-                          spacing: 20,
-                          pinnedViews: [.sectionHeaders])
-                {
-                    Section {
-                        ForEach(viewModel.contents, id: \.self) { contents in
-                            NavigationLink(destination: ContentDetailView(detailViewContentId: contents.contentId!)) {
-                                ContentCardView(contentId: contents.contentId!)
+                if viewModel.contents.isEmpty {
+                    Text("コンテンツを追加してください")
+                        .font(.title2)
+                        .foregroundColor(.gray)
+                } else {
+                    LazyVGrid(columns: viewModel.columns,
+                              spacing: 20,
+                              pinnedViews: [.sectionHeaders])
+                    {
+                        Section {
+                            ForEach(viewModel.contents, id: \.self) { contents in
+                                NavigationLink(destination: ContentDetailView(detailViewContentId: contents.contentId!)) {
+                                    ContentCardView(contentId: contents.contentId!)
+                                }
                             }
-//                            Button(action: {
-//                                self.contentId = contents.contentId!
-//                                print("選択したコンテンツ：\(contentId)")
-//                                self.showContentDetailView.toggle()
-//
-//
-//                            }) {
-//                                ContentCardView(contentId: contents.contentId!)
-//                            }
-//                            .sheet(isPresented: $showContentDetailView) {
-//                                ContentDetailView(detailViewContentId: self.contentId)
-//                            }
-                            
                         }
                     }
                 }
