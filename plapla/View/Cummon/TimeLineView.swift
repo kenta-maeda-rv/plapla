@@ -56,8 +56,13 @@ struct TimeLineView: View {
                     .frame(width: 3)
             }
             VStack {
-                
-                tagView(process: postData.process!)
+                HStack() {
+                    tagView(process: postData.process!)
+                    Spacer()
+                    Text(ScreenUtil.dateFormatterToYYYYMMdd(date: postData.postDate!))
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                }
                 
                 VStack(alignment: .leading, spacing: 20) {
                     Image(uiImage: (((ScreenUtil.getImage(id: postData.postId) ?? UIImage(named: "create"))!)))
@@ -76,12 +81,6 @@ struct TimeLineView: View {
                         Spacer()
                     }
                     
-                }
-                HStack() {
-                    Spacer()
-                    Text(ScreenUtil.dateFormatterToYYYYMMdd(date: postData.postDate!))
-                    .font(.footnote)
-                    .foregroundColor(.gray)
                 }
             }
             .padding()

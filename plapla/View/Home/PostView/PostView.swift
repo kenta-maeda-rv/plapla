@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostView: View {
-    @AppStorage("contentId") var contentId = ""
+    @AppStorage("homeViewContentId") var homeViewContentId = ""
     @Environment(\.presentationMode) var presentationMode
     
     @StateObject var viewModel: PostViewModel = PostViewModel()
@@ -41,7 +41,7 @@ struct PostView: View {
                 .padding(.horizontal, 18)
                 
                 Button(action: {
-                    self.viewModel.tapAddButton(contentId: contentId,
+                    self.viewModel.tapAddButton(contentId: homeViewContentId,
                                                 title: titleText,
                                                 discription: discriptionText,
                                                 image: imageSelected,

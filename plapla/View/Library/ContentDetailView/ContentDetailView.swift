@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentDetailView: View {
     @Environment(\.presentationMode) var presentationMode
-    var contentId = ""
+    @AppStorage("homeViewContentId") var homeViewContentId = ""
+    var detailViewContentId = ""
     @StateObject var viewModel: ContentDetailViewModel = ContentDetailViewModel()
     
     @State var postDatas: [PostData] = [PostData(postId: "",
@@ -21,17 +22,27 @@ struct ContentDetailView: View {
                                                  process: "")]
     
     var body: some View {
-        VStack {
-            Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("TOPに表示")
+        ZStack {
+            VStack {
+                TimeLineView(postDatas: $postDatas)
             }
-            TimeLineView(postDatas: $postDatas)
+            PostButtonView()
+                .hTrailing()
+                .vBottom()
         }
         .onAppear {
-            self.postDatas = self.viewModel.getScreenData(contentId: self.contentId)
+            self.postDatas = self.viewModel.getScreenData(contentId: self.detailViewContentId)
             print("ContentDetailView表示時：\(self.postDatas)")
+        }
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button(action: {
+                    self.homeViewContentId = self.detailViewContentId
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("TOPに表示")
+                }
+            }
         }
     }
 }

@@ -24,15 +24,21 @@ struct LibraryView: View {
                 {
                     Section {
                         ForEach(viewModel.contents, id: \.self) { contents in
-                            Button(action: {
-                                self.contentId = contents.contentId!
-                                self.showContentDetailView.toggle()
-                            }) {
+                            NavigationLink(destination: ContentDetailView(detailViewContentId: contents.contentId!)) {
                                 ContentCardView(contentId: contents.contentId!)
                             }
-                            .sheet(isPresented: $showContentDetailView) {
-                                ContentDetailView(contentId: contents.contentId!)
-                            }
+//                            Button(action: {
+//                                self.contentId = contents.contentId!
+//                                print("選択したコンテンツ：\(contentId)")
+//                                self.showContentDetailView.toggle()
+//
+//
+//                            }) {
+//                                ContentCardView(contentId: contents.contentId!)
+//                            }
+//                            .sheet(isPresented: $showContentDetailView) {
+//                                ContentDetailView(detailViewContentId: self.contentId)
+//                            }
                             
                         }
                     }

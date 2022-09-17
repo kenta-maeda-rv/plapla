@@ -20,16 +20,25 @@ struct ContentAddView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView(.vertical) {
+            VStack(alignment: .center, spacing: 32) {
                 
                 ImageSelectButton(imageSelected: $imageSelected)
                 
-                TextField("contentTitle", text: $titleText)
-                    .padding(30)
-                    .background(Color.gray)
-                TextField("discription", text: $discriptionText)
-                    .padding(30)
-                    .background(Color.gray)
+                VStack {
+                    TextField("コンテンツタイトル", text: $titleText)
+                        .tint(.secondary)
+                    Divider()
+                }
+                .padding(10)
+                .padding(.horizontal, 18)
+                
+                VStack {
+                    TextField("コンテンツ詳細", text: $discriptionText)
+                        .tint(.secondary)
+                    Divider()
+                }
+                .padding(10)
+                .padding(.horizontal, 18)
                 
                 Button(action: {
                     self.viewModel.tapAddButton(title: titleText,
@@ -38,10 +47,14 @@ struct ContentAddView: View {
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("追加")
+                        .foregroundColor(.white)
                 }
                 .padding(150)
-                .frame(height: 80)
-                .background(Color.gray)
+                .frame(height: 60)
+                .background(Color.accentColor)
+                .cornerRadius(15)
+                
+                Spacer()
             }
             .navigationBarTitle(Text("コンテンツ追加"),
                                 displayMode: .inline)
@@ -51,6 +64,7 @@ struct ContentAddView: View {
                         self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text("閉じる")
+                            .foregroundColor(.primary)
                     }
                 }
             }
