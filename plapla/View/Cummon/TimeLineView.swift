@@ -55,42 +55,68 @@ struct TimeLineView: View {
                     .fill(.black)
                     .frame(width: 3)
             }
-            
             VStack {
                 
-                HStack(alignment: .top, spacing: 10) {
-                    
-                    Text(postData.postTitle!)
-                    Text(postData.postDiscription!)
-                        .font(.callout)
-                        .foregroundColor(.secondary)
-                    
-                    Spacer()
-                }
+                tagView(process: postData.process!)
                 
-                Image(uiImage: (((ScreenUtil.getImage(id: postData.postId) ?? UIImage(named: "create"))!)))
-                    .resizable()
-                    .frame(height: 200)
+                VStack(alignment: .leading, spacing: 20) {
+                    Image(uiImage: (((ScreenUtil.getImage(id: postData.postId) ?? UIImage(named: "create"))!)))
+                        .resizable()
+                        .frame(height: 200)
+                        .cornerRadius(25)
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        Text(postData.postTitle!)
+                            .font(.title3)
+                            .bold()
+                        Text(postData.postDiscription!)
+                            .font(.body)
+                        
+                        Spacer()
+                    }
+                    
+                }
+                HStack() {
+                    Spacer()
+                    Text(ScreenUtil.dateFormatterToYYYYMMdd(date: postData.postDate!))
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+                }
             }
             .padding()
             .hLeading()
             .background(
-                Color.gray
+                Color.init(red: 245/255, green: 245/255, blue: 245/255)
                     .cornerRadius(25)
             )
         }
         .padding()
     }
+    func tagView(process: String) -> some View {
+        VStack{
+            Text(process)
+                .font(.subheadline)
+                .foregroundColor(.white)
+        }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 5)
+        .background(
+            Color.accentColor
+                .cornerRadius(10)
+        )
+        
+    }
 }
 
 
 struct TimeLineView_Previews: PreviewProvider {
-    @State static var postData:[PostData] = [PostData(postId: "",
-                                                      contentId: "",
-                                                      postTitle: "",
-                                                      postDiscription: "",
+    @State static var postData:[PostData] = [PostData(postId: "postId",
+                                                      contentId: "contentId",
+                                                      postTitle: "postTitle",
+                                                      postDiscription: "postDiscription",
                                                       postDate: Date(),
-                                                      ImageUrl:  "",
+                                                      ImageUrl:  "ImageUrl",
                                                       process: "本組")]
     
     static var previews: some View {

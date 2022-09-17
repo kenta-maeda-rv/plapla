@@ -9,6 +9,20 @@ import Foundation
 import UIKit
 
 class ScreenUtil {
+    
+    class func dateFormatterToYYYYMMdd(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.calendar = Calendar(identifier: .gregorian)
+        dateFormatter.locale = Locale(identifier: "ja_JP")
+        dateFormatter.timeZone = TimeZone(identifier:  "Asia/Tokyo")
+        dateFormatter.dateFormat = "yyyyMMdd"
+        
+        let dateString = dateFormatter.string(from: date)
+        
+        return dateString
+    }
+    
     class func getImage(id: String?) -> UIImage? {
         guard let id = id else {
             print("contentIdが存在しない")

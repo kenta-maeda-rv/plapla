@@ -39,7 +39,7 @@ struct LibraryView: View {
                 }
             }
             .padding()
-            .navigationTitle("LibraryView")
+            .navigationTitle("コンテンツ一覧")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button(action: {
