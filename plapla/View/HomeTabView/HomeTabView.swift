@@ -13,11 +13,6 @@ struct HomeTabView: View {
     
     var body: some View {
         TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("ホーム")
-                }
             LibraryView()
                 .tabItem {
                     Image(systemName: "square.grid.2x2")
