@@ -18,7 +18,6 @@ extension RepogitoryManager {
     ///  コンテンツの保存
     func savePostData(
         contentId: String,
-        postTitle: String,
         postDiscription: String,
         postDate: Date,
         postImage: UIImage,
@@ -33,7 +32,6 @@ extension RepogitoryManager {
             try realm?.write {
                 let db = PostData(postId: postId,
                                   contentId: contentId,
-                                  postTitle: postTitle,
                                   postDiscription: postDiscription,
                                   postDate: postDate,
                                   ImageUrl: path.path,

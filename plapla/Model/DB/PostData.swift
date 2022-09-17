@@ -14,8 +14,6 @@ class PostData: Object {
     @objc dynamic var postId = UUID().uuidString
     // コンテンツId
     @objc dynamic var contentId: String?
-    // 投稿タイトル
-    @objc dynamic var postTitle: String?
     // 投稿内容
     @objc dynamic var postDiscription: String?
     // 投稿日
@@ -28,7 +26,6 @@ class PostData: Object {
     public convenience init(
         postId: String,
         contentId: String,
-        postTitle: String,
         postDiscription: String,
         postDate: Date,
         ImageUrl: String,
@@ -38,7 +35,6 @@ class PostData: Object {
         
         self.postId = postId
         self.contentId = contentId
-        self.postTitle = postTitle
         self.postDiscription = postDiscription
         self.postDate = postDate
         self.ImageUrl = ImageUrl

@@ -67,20 +67,18 @@ struct TimeLineView: View {
                 VStack(alignment: .leading, spacing: 20) {
                     Image(uiImage: (((ScreenUtil.getImage(id: postData.postId) ?? UIImage(named: "create"))!)))
                         .resizable()
+                        .scaledToFit()
                         .frame(height: 200)
                         .cornerRadius(25)
                     
-                    VStack(alignment: .leading, spacing: 10) {
-                        
-                        Text(postData.postTitle!)
-                            .font(.title3)
-                            .bold()
-                        Text(postData.postDiscription!)
-                            .font(.body)
-                        
-                        Spacer()
-                    }
                     
+                }
+                HStack(alignment: .center, spacing: 10) {
+                    
+                    Text(postData.postDiscription!)
+                        .font(.body)
+                    
+                    Spacer()
                 }
             }
             .padding()
@@ -109,7 +107,6 @@ struct TimeLineView: View {
 struct TimeLineView_Previews: PreviewProvider {
     @State static var postData:[PostData] = [PostData(postId: "postId",
                                                       contentId: "contentId",
-                                                      postTitle: "postTitle",
                                                       postDiscription: "postDiscription",
                                                       postDate: Date(),
                                                       ImageUrl:  "ImageUrl",

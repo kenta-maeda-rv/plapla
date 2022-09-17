@@ -23,17 +23,8 @@ struct PostView: View {
                 
                 ImageSelectButton(imageSelected: $imageSelected)
                 
-                
                 VStack {
-                    TextField("コンテンツタイトル", text: $titleText)
-                        .tint(.secondary)
-                    Divider()
-                }
-                .padding(10)
-                .padding(.horizontal, 18)
-                
-                VStack {
-                    TextField("コンテンツ詳細", text: $discriptionText)
+                    TextField("投稿文", text: $discriptionText)
                         .tint(.secondary)
                     Divider()
                 }
@@ -42,7 +33,6 @@ struct PostView: View {
                 
                 Button(action: {
                     self.viewModel.tapAddButton(contentId: homeViewContentId,
-                                                title: titleText,
                                                 discription: discriptionText,
                                                 image: imageSelected,
                                                 process: .assembly

@@ -11,14 +11,12 @@ class PostViewModel: ObservableObject {
     
     func tapAddButton(
         contentId: String,
-        title: String,
         discription:String,
         image: UIImage,
         process: Process
     ) {
         print("保存するcontentId:\(contentId)")
         RepogitoryManager.shared.savePostData(contentId: contentId,
-                                              postTitle: title,
                                               postDiscription: discription,
                                               postDate: Date(),
                                               postImage: image,

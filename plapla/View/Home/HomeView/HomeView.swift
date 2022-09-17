@@ -13,7 +13,6 @@ struct HomeView: View {
     
     @State var postDatas: [PostData] = [PostData(postId: "",
                                                  contentId: "",
-                                                 postTitle: "",
                                                  postDiscription: "",
                                                  postDate: Date(),
                                                  ImageUrl:  "",

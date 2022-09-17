@@ -19,7 +19,6 @@ class HomeViewModel: ObservableObject {
         
         let data = postData.map{PostData(postId: $0.postId,
                                          contentId: $0.contentId!,
-                                         postTitle: $0.postTitle!,
                                          postDiscription: $0.postDiscription!,
                                          postDate: $0.postDate!,
                                          ImageUrl: $0.ImageUrl!,
