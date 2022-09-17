@@ -8,5 +8,5 @@
 import SwiftUI
 
 extension Color {
-    static let accentColor = Color.init(red: 242/255, green: 127/255, blue: 12/255)
+
 }

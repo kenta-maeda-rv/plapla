@@ -29,4 +29,12 @@ class HomeViewModel: ObservableObject {
         print("取得したコンテンツデータ\(result)")
         return result
     }
+    
+    func getContentTitle(id: String) -> String{
+        guard let contentTitle = RepogitoryManager.shared.contentPermanentlyDb?.filter("contentId == %@", id).first?.contentTitle else {
+            print("コンテンツタイトルの取得失敗")
+            return ""
+        }
+        return contentTitle
+    }
 }

@@ -37,6 +37,9 @@ struct HomeTabView: View {
         .fullScreenCover(isPresented: $isFirstLaunch) {
             OnBoargingView()
         }
+        .background(
+            Color.accentColor
+        )
     }
 }
 

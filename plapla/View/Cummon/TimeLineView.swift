@@ -86,10 +86,6 @@ struct TimeLineView: View {
             }
             .padding()
             .hLeading()
-            .background(
-                Color.init(red: 245/255, green: 245/255, blue: 245/255)
-                    .cornerRadius(25)
-            )
         }
         .padding()
     }
@@ -103,8 +99,9 @@ struct TimeLineView: View {
         .padding(.vertical, 5)
         .background(
             Color.accentColor
-                .cornerRadius(10)
         )
+        .cornerRadius(10)
+        .hLeading()
         
     }
 }

@@ -18,6 +18,8 @@ struct HomeView: View {
                                                  postDate: Date(),
                                                  ImageUrl:  "",
                                                  process: "")]
+    @State var navigationTitle = ""
+    
     var body: some View {
         NavigationView{
             ZStack {
@@ -26,8 +28,9 @@ struct HomeView: View {
                     .hTrailing()
                     .vBottom()
             }
-            .navigationTitle(contentId)
+            .navigationTitle(self.navigationTitle)
             .onAppear {
+                self.navigationTitle = self.viewModel.getContentTitle(id: contentId)
                 self.postDatas = self.viewModel.getScreenData(contentId: contentId)
                 print("HomeView表示時：\(self.postDatas)")
             }

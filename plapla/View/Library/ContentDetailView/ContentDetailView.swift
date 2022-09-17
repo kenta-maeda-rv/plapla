@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentDetailView: View {
     @Environment(\.presentationMode) var presentationMode
-    @AppStorage("contentId") var contentId = ""
+    var contentId = ""
     @StateObject var viewModel: ContentDetailViewModel = ContentDetailViewModel()
     
     @State var postDatas: [PostData] = [PostData(postId: "",
@@ -23,7 +23,6 @@ struct ContentDetailView: View {
     var body: some View {
         VStack {
             Button(action: {
-                contentId = contentId
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("TOPに表示")
