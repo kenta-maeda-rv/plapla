@@ -14,38 +14,70 @@ struct PaintDetailView: View {
     @State var SliderValue: Double = 0
     
     let paintDatas: Paint
- 
+    
     var body: some View {
-        VStack{
-            HStack {
-                Rectangle()
-                    .fill(Color(PaintUIColorDic[paintDatas.colorName!]!))
-                    .frame(width: 50, height: 50)
-                
-                VStack {
-                    Text(paintDatas.colorName!)
+        VStack(spacing: 64) {
+            VStack(spacing: 32){
+                HStack {
+                    Rectangle()
+                        .fill(Color(PaintUIColorDic[paintDatas.colorName!]!))
+                        .frame(height: 80)
+                        .cornerRadius(20)
+                    Spacer()
                 }
-                
-                Spacer()
-                
-                VStack {
-                    Text(paintDatas.brand!)
-                    Text(paintDatas.type!)
-                    Text(paintDatas.solvent!)
-                    Text(paintDatas.finish!)
+                HStack {
+                    Spacer()
+                    
+                    VStack(spacing: 16) {
+                        paintDetailCell(title: "ブランド", detail: paintDatas.brand!)
+                        paintDetailCell(title: "タイプ", detail: paintDatas.type!)
+                        paintDetailCell(title: "溶剤", detail: paintDatas.solvent!)
+                        paintDetailCell(title: "仕上がり", detail: paintDatas.finish!)
+                    }
+                    
                 }
+                HStack {
+                    Text("残量")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                    Spacer()
+                    Text("\(SliderValue, specifier: "%.0f")%")
+                        .font(.title)
+                        .bold()
+                    Spacer()
+                }
+                .padding(.horizontal, 8)
                 
+                Slider(value: $SliderValue, in: 0...100)
             }
-            Text("残量:\(SliderValue)%")
-            Slider(value: $SliderValue, in: 0...10)
             
             Button(action: {
                 self.presentation.wrappedValue.dismiss()
             }) {
                 Text("保存")
+                    .foregroundColor(.white)
             }
+            .padding(150)
+            .frame(height: 60)
+            .background(Color.accentColor)
+            .cornerRadius(15)
+            
+            Spacer()
         }
+        .padding(.horizontal, 16)
         .navigationTitle(paintDatas.colorName!)
+    }
+    
+    func paintDetailCell(title: String, detail: String) -> some View {
+        HStack {
+            Text(title)
+                .font(.subheadline)
+                .foregroundColor(.gray)
+            Spacer()
+            Text(detail)
+                .font(.title3)
+                .bold()
+        }
     }
 }
 

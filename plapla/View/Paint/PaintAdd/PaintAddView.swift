@@ -88,7 +88,7 @@ struct PaintAddView: View {
                     self.paintDatas = RepogitoryManager.shared.getPaintData()
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
-                    Text("保存")
+                    Text("追加")
                         .foregroundColor(.white)
                 }
                 .padding(150)
