@@ -38,6 +38,7 @@ class Paint: Object, Identifiable {
         self.colorName = color.rawValue
         self.brand = brand.rawValue
         self.type = type.rawValue
+        self.solvent = solvent.rawValue
         self.finish = finish.rawValue
     }
 }

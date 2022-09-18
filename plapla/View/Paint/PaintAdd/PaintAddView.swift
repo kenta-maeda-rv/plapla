@@ -11,6 +11,11 @@ import SwiftUI
 struct PaintAddView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel: PaintAddViewModel = PaintAddViewModel()
+    @State var paintColor: PaintColor = .green
+    @State var paintBrand: PaintBrand = .gundamColor
+    @State var paintType: PaintType = .bottle
+    @State var solvent: Solvent = .lacquer
+    @State var finish: Finish = .clearColor
     
     var body: some View {
         NavigationView {
@@ -20,7 +25,7 @@ struct PaintAddView: View {
                     
                     Spacer()
                     
-                    Picker(selection: .constant(1), label: Text("色名")) {
+                    Picker(selection: $paintColor, label: Text("色名")) {
                         ForEach(PaintColor.allCases, id: \.self) { color in
                             Text(color.rawValue).tag(color)
                         }
@@ -31,7 +36,7 @@ struct PaintAddView: View {
                     
                     Spacer()
                     
-                    Picker(selection: .constant(1), label: Text("ブランド")) {
+                    Picker(selection: $paintBrand, label: Text("ブランド")) {
                         ForEach(PaintBrand.allCases, id: \.self) { brand in
                             Text(brand.rawValue).tag(brand)
                         }
@@ -42,7 +47,7 @@ struct PaintAddView: View {
                     
                     Spacer()
                     
-                    Picker(selection: .constant(1), label: Text("タイプ")) {
+                    Picker(selection: $paintType, label: Text("タイプ")) {
                         ForEach(PaintType.allCases, id: \.self) { type in
                             Text(type.rawValue).tag(type)
                         }
@@ -53,7 +58,7 @@ struct PaintAddView: View {
                     
                     Spacer()
                     
-                    Picker(selection: .constant(1), label: Text("溶剤")) {
+                    Picker(selection: $solvent, label: Text("溶剤")) {
                         ForEach(Solvent.allCases, id: \.self) { solvent in
                             Text(solvent.rawValue).tag(solvent)
                         }
@@ -64,7 +69,7 @@ struct PaintAddView: View {
                     
                     Spacer()
                     
-                    Picker(selection: .constant(1), label: Text("仕上がり")) {
+                    Picker(selection: $finish, label: Text("仕上がり")) {
                         ForEach(Finish.allCases, id: \.self) { finish in
                             Text(finish.rawValue).tag(finish)
                         }
@@ -72,6 +77,11 @@ struct PaintAddView: View {
                 }
                 
                 Button(action: {
+                    RepogitoryManager.shared.savePaintData(color: PaintColor(rawValue: paintColor.rawValue) ?? .green,
+                                                           brand: PaintBrand(rawValue: paintBrand.rawValue) ?? .gundamColor,
+                                                           type: PaintType(rawValue: paintType.rawValue) ?? .bottle,
+                                                           solvent: Solvent(rawValue: solvent.rawValue) ?? .lacquer,
+                                                           finish: Finish(rawValue: finish.rawValue) ?? .clearColor)
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("保存")
