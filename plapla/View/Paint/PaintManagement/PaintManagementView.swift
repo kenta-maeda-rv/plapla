@@ -35,7 +35,7 @@ struct PaintManagementView: View {
                 }
             }
             .sheet(isPresented: $showPaintDetailView) {
-                PaintAddView()
+                PaintAddView(paintDatas: $paintDatas)
             }
             .onAppear {
                 self.paintDatas = RepogitoryManager.shared.getPaintData()
