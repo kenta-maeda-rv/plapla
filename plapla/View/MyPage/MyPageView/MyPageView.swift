@@ -30,7 +30,7 @@ struct MyPageView: View {
                     Text("")
                 })
             }
-            .navigationTitle(Text("MyPageView"))
+            .navigationTitle(Text("マイページ"))
         }
     }
 }

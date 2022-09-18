@@ -35,7 +35,7 @@ extension RepogitoryManager {
                                   postDiscription: postDiscription,
                                   postDate: postDate,
                                   ImageUrl: path.path,
-                                  process: process.processString
+                                  process: process.rawValue
                 )
                 realm?.add(db)
                 logger.debug("投稿の保存に成功")

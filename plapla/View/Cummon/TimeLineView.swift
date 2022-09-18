@@ -57,7 +57,7 @@ struct TimeLineView: View {
             }
             VStack {
                 HStack() {
-                    tagView(process: postData.process!)
+                    TagView(process: postData.process!)
                     Spacer()
                     Text(ScreenUtil.dateFormatterToYYYYMMdd(date: postData.postDate!))
                         .font(.footnote)
@@ -85,21 +85,6 @@ struct TimeLineView: View {
             .hLeading()
         }
         .padding()
-    }
-    func tagView(process: String) -> some View {
-        VStack{
-            Text(process)
-                .font(.subheadline)
-                .foregroundColor(.white)
-        }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 5)
-        .background(
-            Color.accentColor
-        )
-        .cornerRadius(10)
-        .hLeading()
-        
     }
 }
 

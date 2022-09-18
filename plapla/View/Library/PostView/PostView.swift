@@ -15,6 +15,7 @@ struct PostView: View {
     @State var titleText = ""
     @State var discriptionText = ""
     @State var imageSelected: UIImage = UIImage(systemName: "camera")!
+    @State var process: Process = .preparation
     @Binding var postDatas: [PostData]
     
     var contentId: String
@@ -25,10 +26,28 @@ struct PostView: View {
                 
                 ImageSelectButton(imageSelected: $imageSelected)
                 
-                VStack {
-                    TextField("投稿文", text: $discriptionText)
-                        .tint(.secondary)
-                    Divider()
+                VStack(spacing: 32) {
+                    VStack {
+                        TextField("投稿文", text: $discriptionText)
+                            .tint(.secondary)
+                        Divider()
+                    }
+                    
+                    VStack {
+                        HStack {
+                            Text("工程")
+                                .tint(.secondary)
+                                .foregroundColor(.gray)
+                                .hLeading()
+                            Spacer()
+                            Picker(selection: $process, label: Text("工程")) {
+                                ForEach(Process.allCases, id: \.self) { process in
+                                    TagView(process: process.rawValue).tag(process)
+                                }
+                            }
+                        }
+                        Divider()
+                    }
                 }
                 .padding(10)
                 .padding(.horizontal, 18)
@@ -37,7 +56,7 @@ struct PostView: View {
                     self.viewModel.savePostData(contentId: contentId,
                                                 discription: discriptionText,
                                                 image: imageSelected,
-                                                process: .assembly
+                                                process: process
                     )
                     self.postDatas = RepogitoryManager.shared.getPostData(contentId: self.contentId)
                     self.presentationMode.wrappedValue.dismiss()

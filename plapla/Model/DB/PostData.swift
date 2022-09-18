@@ -43,35 +43,19 @@ class PostData: Object {
 }
 
 /// 工程
-enum Process {
+enum Process: String, Hashable, CaseIterable {
     /// 準備
-    case preparation
+    case preparation = "準備"
     /// 仮組み
-    case temporaryAssembly
+    case temporaryAssembly = "仮組み"
     /// 本組
-    case assembly
+    case assembly = "本組"
     /// 塗装
-    case painting
+    case painting = "塗装"
     /// デカール貼り
-    case decalPasting
+    case decalPasting = "デカール貼り"
     /// 完成
-    case complete
+    case complete = "完成"
     
-    var processString: String {
-        switch self {
-            case .preparation:
-                return "準備"
-            case .temporaryAssembly:
-                return "仮組み"
-            case .assembly:
-                return "本組"
-            case .painting:
-                return "塗装"
-            case .decalPasting:
-                return "デカール貼り"
-            case .complete:
-                return "完成"
-        }
-    }
 }
 

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3ABDD4066395FB6223A19F8C /* PaintAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B2DFF71D12EA2E7FB6FEEF /* PaintAddView.swift */; };
-		468A6F60C397A21BF64CABA1 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CF320B9C5D7861002D554 /* NotificationViewModel.swift */; };
 		6E1E7837288586CB00EFA596 /* StorageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E7836288586CB00EFA596 /* StorageContent.swift */; };
 		6E1E78392885877100EFA596 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E78382885877100EFA596 /* PostData.swift */; };
 		6E1E783B288588E400EFA596 /* RepogitoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1E783A288588E400EFA596 /* RepogitoryManager.swift */; };
@@ -36,6 +35,7 @@
 		6EC57A2328BBB6640025312D /* PostImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC57A2228BBB6640025312D /* PostImageView.swift */; };
 		6ECDFC66279453DC00B1E35A /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDFC65279453DC00B1E35A /* LibraryViewModel.swift */; };
 		6ECDFC682794617200B1E35A /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDFC672794617100B1E35A /* MyPageViewModel.swift */; };
+		6EE021C828D751DA0077EAF1 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE021C728D751DA0077EAF1 /* TagView.swift */; };
 		6EE3B3F927E81CAD00698A7B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE3B3F827E81CAC00698A7B /* ImagePicker.swift */; };
 		6EF1A49727E079BC00F5CD38 /* Paint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1A49627E079BC00F5CD38 /* Paint.swift */; };
 		6EF1C2CC28D5DFBD008428A2 /* PostButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1C2CB28D5DFBD008428A2 /* PostButtonView.swift */; };
@@ -45,7 +45,6 @@
 		90C28C01756203B3B8C4C8D4 /* PaintManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B235AB7C30562D8E639B0 /* PaintManagementView.swift */; };
 		D696971D07608E953DD4B07E /* PaintDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926ED817EA121648D6030726 /* PaintDetailViewModel.swift */; };
 		D9FD54FC29163497ABA31115 /* Pods_plapla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C2D28E4844C61E5941BAE9 /* Pods_plapla.framework */; };
-		DA310C61F5CF4D207B075F91 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2860D959EB31220C1065D /* NotificationView.swift */; };
 		E62FABFE40598AF4D6E2EE97 /* PaintManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126CDD4B33D7DFABF699D6B6 /* PaintManagementViewModel.swift */; };
 		E6E343106B5831380FDFA91C /* PaintAddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C50050143C1C6ED3E9C321 /* PaintAddViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -55,7 +54,6 @@
 		20B2DFF71D12EA2E7FB6FEEF /* PaintAddView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintAddView.swift; sourceTree = "<group>"; };
 		3B653F3F0F0362DCC057D6DA /* PaintDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintDetailView.swift; sourceTree = "<group>"; };
 		44C2D28E4844C61E5941BAE9 /* Pods_plapla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plapla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AF2860D959EB31220C1065D /* NotificationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		6E1E7836288586CB00EFA596 /* StorageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageContent.swift; sourceTree = "<group>"; };
 		6E1E78382885877100EFA596 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		6E1E783A288588E400EFA596 /* RepogitoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepogitoryManager.swift; sourceTree = "<group>"; };
@@ -85,6 +83,7 @@
 		6EC57A2228BBB6640025312D /* PostImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageView.swift; sourceTree = "<group>"; };
 		6ECDFC65279453DC00B1E35A /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		6ECDFC672794617100B1E35A /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
+		6EE021C728D751DA0077EAF1 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		6EE3B3F827E81CAC00698A7B /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		6EF1A49627E079BC00F5CD38 /* Paint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint.swift; sourceTree = "<group>"; };
 		6EF1C2CB28D5DFBD008428A2 /* PostButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostButtonView.swift; sourceTree = "<group>"; };
@@ -93,7 +92,6 @@
 		74C50050143C1C6ED3E9C321 /* PaintAddViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintAddViewModel.swift; sourceTree = "<group>"; };
 		926ED817EA121648D6030726 /* PaintDetailViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintDetailViewModel.swift; sourceTree = "<group>"; };
 		A5EB392D7657432B02709ACF /* Pods-plapla.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plapla.release.xcconfig"; path = "Target Support Files/Pods-plapla/Pods-plapla.release.xcconfig"; sourceTree = "<group>"; };
-		A85CF320B9C5D7861002D554 /* NotificationViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		E4DB3BFEAC355809FBE209AA /* Pods-plapla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plapla.debug.xcconfig"; path = "Target Support Files/Pods-plapla/Pods-plapla.debug.xcconfig"; sourceTree = "<group>"; };
 		FC0B235AB7C30562D8E639B0 /* PaintManagementView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaintManagementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,15 +114,6 @@
 				44C2D28E4844C61E5941BAE9 /* Pods_plapla.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1A188B138BB041F5D7E7C826 /* Notification */ = {
-			isa = PBXGroup;
-			children = (
-				6AF2860D959EB31220C1065D /* NotificationView.swift */,
-				A85CF320B9C5D7861002D554 /* NotificationViewModel.swift */,
-			);
-			path = Notification;
 			sourceTree = "<group>";
 		};
 		3238B463AC8F51252D3AF5CB /* PaintAdd */ = {
@@ -242,6 +231,7 @@
 				6EC57A1928BB96BE0025312D /* TimeLineView.swift */,
 				6EC57A2228BBB6640025312D /* PostImageView.swift */,
 				6EF1C2CB28D5DFBD008428A2 /* PostButtonView.swift */,
+				6EE021C728D751DA0077EAF1 /* TagView.swift */,
 			);
 			path = Cummon;
 			sourceTree = "<group>";
@@ -308,7 +298,6 @@
 			isa = PBXGroup;
 			children = (
 				6ECDFC63279405BF00B1E35A /* MyPageView */,
-				1A188B138BB041F5D7E7C826 /* Notification */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -493,6 +482,7 @@
 				6E240A2427DF803100D76C14 /* OffsetPageTabView.swift in Sources */,
 				6E930378278AAC5F006025AB /* plaplaApp.swift in Sources */,
 				6ECDFC66279453DC00B1E35A /* LibraryViewModel.swift in Sources */,
+				6EE021C828D751DA0077EAF1 /* TagView.swift in Sources */,
 				6E240A1B27DF7ABD00D76C14 /* ContentDetailViewModel.swift in Sources */,
 				6E1E7837288586CB00EFA596 /* StorageContent.swift in Sources */,
 				6EE3B3F927E81CAD00698A7B /* ImagePicker.swift in Sources */,
@@ -500,8 +490,6 @@
 				6EC57A2128BBB61C0025312D /* PostViewModel.swift in Sources */,
 				6E3A267628D6EAC500F2B277 /* StoragePaintData.swift in Sources */,
 				6E9BCF65278C020300074C64 /* MyPageView.swift in Sources */,
-				DA310C61F5CF4D207B075F91 /* NotificationView.swift in Sources */,
-				468A6F60C397A21BF64CABA1 /* NotificationViewModel.swift in Sources */,
 				6EC57A1A28BB96BE0025312D /* TimeLineView.swift in Sources */,
 				6EC57A1F28BBB60E0025312D /* PostView.swift in Sources */,
 				6EC57A2328BBB6640025312D /* PostImageView.swift in Sources */,
