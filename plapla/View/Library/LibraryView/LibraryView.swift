@@ -29,8 +29,13 @@ struct LibraryView: View {
                     {
                         Section {
                             ForEach(viewModel.contents, id: \.self) { contents in
-                                NavigationLink(destination: ContentDetailView(detailViewContentId: contents.contentId!)) {
-                                    ContentCardView(contentId: contents.contentId!)
+                                VStack {
+                                    NavigationLink(destination: ContentDetailView(detailViewContentId: contents.contentId!)) {
+                                        ContentCardView(contentId: contents.contentId!)
+                                    }
+                                    Text(contents.contentTitle!)
+                                        .font(.footnote)
+                                        .bold()
                                 }
                             }
                         }
