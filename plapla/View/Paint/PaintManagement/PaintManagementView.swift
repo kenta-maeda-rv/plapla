@@ -81,24 +81,33 @@ struct PaintView: View {
     
     
     var body: some View {
-        HStack {
+        HStack(alignment:.center) {
             Rectangle()
                 .fill(Color(color))
                 .frame(width: 50, height: 50)
+                .cornerRadius(15)
+                .padding(16)
             
-            VStack {
-                Text(colorName)
+            GeometryReader { geometry in
+                HStack {
+                    Text(colorName)
+                        .foregroundColor(.primary)
+                        .font(.body)
+                        .frame(width:  geometry.size.width / 3,
+                               height:  geometry.size.height,
+                               alignment: .leading)
+                    
+                    ProgressView(value: 0.5)
+                        .frame(height:  geometry.size.height,
+                               alignment: .center)
+                        .padding(.horizontal,10)
+                }
             }
-            
-            Spacer()
-            
-            VStack {
-                Text(brand)
-                Text(type)
-                Text(solvent)
-                Text(finish)
-            }
-            
         }
+        .background(.white)
+        .cornerRadius(15)
+        .shadow(color: .gray.opacity(0.5), radius: 15)
+        .padding(.horizontal, 16)
+        .padding(.vertical, 8)
     }
 }
