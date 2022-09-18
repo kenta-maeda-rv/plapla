@@ -22,7 +22,6 @@
 		6E32E2F728D56280009619B5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E32E2F628D56280009619B5 /* Color.swift */; };
 		6E3A267628D6EAC500F2B277 /* StoragePaintData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A267528D6EAC500F2B277 /* StoragePaintData.swift */; };
 		6E930378278AAC5F006025AB /* plaplaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E930377278AAC5F006025AB /* plaplaApp.swift */; };
-		6E93037C278AAC60006025AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E93037B278AAC60006025AB /* Assets.xcassets */; };
 		6E93037F278AAC60006025AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E93037E278AAC60006025AB /* Preview Assets.xcassets */; };
 		6E9BCF5D278BFBF700074C64 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BCF5C278BFBF700074C64 /* Logger.swift */; };
 		6E9BCF5F278BFF1800074C64 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9BCF5E278BFF1800074C64 /* HomeTabView.swift */; };
@@ -36,6 +35,7 @@
 		6ECDFC66279453DC00B1E35A /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDFC65279453DC00B1E35A /* LibraryViewModel.swift */; };
 		6ECDFC682794617200B1E35A /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECDFC672794617100B1E35A /* MyPageViewModel.swift */; };
 		6EE021C828D751DA0077EAF1 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE021C728D751DA0077EAF1 /* TagView.swift */; };
+		6EE021C928D755A20077EAF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E93037B278AAC60006025AB /* Assets.xcassets */; };
 		6EE3B3F927E81CAD00698A7B /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE3B3F827E81CAC00698A7B /* ImagePicker.swift */; };
 		6EF1A49727E079BC00F5CD38 /* Paint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1A49627E079BC00F5CD38 /* Paint.swift */; };
 		6EF1C2CC28D5DFBD008428A2 /* PostButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF1C2CB28D5DFBD008428A2 /* PostButtonView.swift */; };
@@ -409,8 +409,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE021C928D755A20077EAF1 /* Assets.xcassets in Resources */,
 				6E93037F278AAC60006025AB /* Preview Assets.xcassets in Resources */,
-				6E93037C278AAC60006025AB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +628,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -652,6 +653,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
