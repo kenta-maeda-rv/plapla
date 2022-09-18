@@ -19,8 +19,10 @@ struct PaintManagementView: View {
         NavigationView {
             ScrollView {
                 ForEach(paintDatas) { data in
-                    NavigationLink(destination: PaintDetailView(paintDatas: data)) {
-                        PaintView(colorName: data.colorName!)
+                    NavigationLink(destination: PaintDetailView(SliderValue: data.quantity,
+                                                                paintDatas: data)) {
+                        PaintView(colorName: data.colorName!,
+                                  ProgressValue: data.quantity)
                     }
                 }
             }
@@ -53,6 +55,7 @@ struct PaintManagementView_Previews: PreviewProvider {
 struct PaintView: View {
     
     let colorName: String
+    let ProgressValue: Double
     
     var body: some View {
         HStack(alignment:.center) {
@@ -71,7 +74,7 @@ struct PaintView: View {
                                height:  geometry.size.height,
                                alignment: .leading)
                     
-                    ProgressView(value: 0.5)
+                    ProgressView(value: ProgressValue / 100)
                         .frame(height:  geometry.size.height,
                                alignment: .center)
                         .padding(.horizontal,10)

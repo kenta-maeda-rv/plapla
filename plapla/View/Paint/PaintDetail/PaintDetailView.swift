@@ -11,7 +11,7 @@ import SwiftUI
 struct PaintDetailView: View {
     @StateObject var viewModel: PaintDetailViewModel = PaintDetailViewModel()
     @Environment(\.presentationMode) var presentation
-    @State var SliderValue: Double = 0
+    @State var SliderValue: Double
     
     let paintDatas: Paint
     
@@ -52,6 +52,8 @@ struct PaintDetailView: View {
             }
             
             Button(action: {
+                RepogitoryManager.shared.updatePaintQuantityData(id: paintDatas.id,
+                                                                 quantity: self.SliderValue)
                 self.presentation.wrappedValue.dismiss()
             }) {
                 Text("保存")
@@ -87,9 +89,10 @@ struct PaintDetailView_Previews: PreviewProvider {
                                            brand: .gundamColor,
                                            type: .bottle,
                                            solvent: .lacquer,
-                                           finish: .clearColor)
+                                           finish: .clearColor,
+                                           quantity: 0.5)
     
     static var previews: some View {
-        PaintDetailView(paintDatas: paint)
+        PaintDetailView(SliderValue: paint.quantity, paintDatas: paint)
     }
 }

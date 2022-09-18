@@ -35,13 +35,30 @@ extension RepogitoryManager {
                                brand: brand,
                                type: type,
                                solvent: solvent,
-                               finish: finish
+                               finish: finish,
+                               quantity: 100
                 )
                 realm?.add(db)
                 logger.debug("塗料データの保存に成功")
             }
         } catch {
             logger.error("塗料データの保存に失敗")
+        }
+    }
+    
+    func updatePaintQuantityData(
+        id: String,
+        quantity: Double? = nil
+    ) {
+        do {
+            let realm = try? realmPermanentlyDb()
+            if let result = try realmPermanentlyDb().objects(Paint.self).filter("id == %@", id).first {
+                try? realm?.write{
+                    if let quantity = quantity { result.quantity = quantity }
+                }
+            }
+        } catch {
+            logger.error("塗料データの更新に失敗")
         }
     }
     
@@ -57,7 +74,9 @@ extension RepogitoryManager {
                                         brand: PaintBrand(rawValue: $0.brand!) ?? .gundamColor,
                                         type: PaintType(rawValue: $0.type!) ?? .bottle,
                                         solvent: Solvent(rawValue: $0.solvent!) ?? .lacquer,
-                                        finish: Finish(rawValue: $0.finish!) ?? .clearColor)}
+                                        finish: Finish(rawValue: $0.finish!) ?? .clearColor,
+                                        quantity: $0.quantity)
+        }
         result.append(contentsOf: data)
         print("取得したコンテンツデータ\(result)")
         return result

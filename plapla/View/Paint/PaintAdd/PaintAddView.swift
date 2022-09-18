@@ -119,7 +119,8 @@ struct PaintAddView_Previews: PreviewProvider {
                                               brand: .gundamColor,
                                               type: .bottle,
                                               solvent: .lacquer,
-                                              finish: .clearColor)]
+                                              finish: .clearColor,
+                                              quantity: 0.5)]
     
     static var previews: some View {
         PaintAddView(paintDatas: $paint)

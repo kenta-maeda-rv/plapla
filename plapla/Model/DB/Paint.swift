@@ -23,6 +23,8 @@ class Paint: Object, Identifiable {
     @objc dynamic var solvent: String?
     /// 仕上がり
     @objc dynamic var finish: String?
+    /// 残量
+    @objc dynamic var quantity: Double = 0.0
     
     public convenience init(
         id: String,
@@ -30,7 +32,8 @@ class Paint: Object, Identifiable {
         brand: PaintBrand,
         type: PaintType,
         solvent: Solvent,
-        finish: Finish
+        finish: Finish,
+        quantity: Double
     ) {
         self.init()
         
@@ -40,6 +43,7 @@ class Paint: Object, Identifiable {
         self.type = type.rawValue
         self.solvent = solvent.rawValue
         self.finish = finish.rawValue
+        self.quantity = quantity
     }
 }
 
