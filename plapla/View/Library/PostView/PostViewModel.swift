@@ -9,7 +9,7 @@ import SwiftUI
 
 class PostViewModel: ObservableObject {
     
-    func tapAddButton(
+    func savePostData(
         contentId: String,
         discription:String,
         image: UIImage,

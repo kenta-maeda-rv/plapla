@@ -24,12 +24,13 @@ struct ContentDetailView: View {
             VStack {
                 TimeLineView(postDatas: $postDatas)
             }
-            PostButtonView(contentId: detailViewContentId)
+            PostButtonView(postDatas: $postDatas,
+                           contentId: detailViewContentId)
                 .hTrailing()
                 .vBottom()
         }
         .onAppear {
-            self.postDatas = self.viewModel.getScreenData(contentId: self.detailViewContentId)
+            self.postDatas = RepogitoryManager.shared.getPostData(contentId: self.detailViewContentId)
             print("ContentDetailView表示時：\(self.postDatas)")
         }
         .navigationTitle("投稿一覧")

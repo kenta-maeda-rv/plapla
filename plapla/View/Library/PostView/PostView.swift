@@ -15,6 +15,7 @@ struct PostView: View {
     @State var titleText = ""
     @State var discriptionText = ""
     @State var imageSelected: UIImage = UIImage(systemName: "camera")!
+    @Binding var postDatas: [PostData]
     
     var contentId: String
     
@@ -33,11 +34,12 @@ struct PostView: View {
                 .padding(.horizontal, 18)
                 
                 Button(action: {
-                    self.viewModel.tapAddButton(contentId: contentId,
+                    self.viewModel.savePostData(contentId: contentId,
                                                 discription: discriptionText,
                                                 image: imageSelected,
                                                 process: .assembly
                     )
+                    self.postDatas = RepogitoryManager.shared.getPostData(contentId: self.contentId)
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("投稿")
@@ -67,7 +69,14 @@ struct PostView: View {
 }
 
 struct PostView_Previews: PreviewProvider {
+    @State static var postData:[PostData] = [PostData(postId: "postId",
+                                                      contentId: "contentId",
+                                                      postDiscription: "postDiscription",
+                                                      postDate: Date(),
+                                                      ImageUrl:  "ImageUrl",
+                                                      process: "本組")]
+    
     static var previews: some View {
-        PostView(contentId: "")
+        PostView(postDatas: $postData, contentId: "")
     }
 }
