@@ -24,6 +24,8 @@ struct PostButtonView: View {
                     .frame(width: circleWidth,
                            height: circleWidth,
                            alignment: .center)
+                    .background(.white)
+                    .cornerRadius(40)
                     .padding(20)
                 
             }.sheet(isPresented: $showContentAddView) {
