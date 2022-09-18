@@ -11,34 +11,28 @@ import SwiftUI
 struct PaintDetailView: View {
     @StateObject var viewModel: PaintDetailViewModel = PaintDetailViewModel()
     @Environment(\.presentationMode) var presentation
-    
     @State var SliderValue: Double = 0
     
-    let colorName: String
-    let color: UIColor
-    let brand: String
-    let type: String
-    let solvent: String
-    let finish: String
-    
+    let paintDatas: Paint
+ 
     var body: some View {
         VStack{
             HStack {
                 Rectangle()
-                    .fill(Color(color))
+                    .fill(Color(PaintUIColorDic[paintDatas.colorName!]!))
                     .frame(width: 50, height: 50)
                 
                 VStack {
-                    Text(colorName)
+                    Text(paintDatas.colorName!)
                 }
                 
                 Spacer()
                 
                 VStack {
-                    Text(brand)
-                    Text(type)
-                    Text(solvent)
-                    Text(finish)
+                    Text(paintDatas.brand!)
+                    Text(paintDatas.type!)
+                    Text(paintDatas.solvent!)
+                    Text(paintDatas.finish!)
                 }
                 
             }
@@ -51,17 +45,19 @@ struct PaintDetailView: View {
                 Text("保存")
             }
         }
-        .navigationTitle(colorName)
+        .navigationTitle(paintDatas.colorName!)
     }
 }
 
 struct PaintDetailView_Previews: PreviewProvider {
+    @State static var paint: Paint = Paint(id: "",
+                                           color: .green,
+                                           brand: .gundamColor,
+                                           type: .bottle,
+                                           solvent: .lacquer,
+                                           finish: .clearColor)
+    
     static var previews: some View {
-        PaintDetailView(colorName: PaintColor.gray.colorString,
-                        color: PaintColor.gray.color,
-                        brand: PaintBrand.gaiaColor.rawValue,
-                        type: PaintType.solvent.rawValue,
-                        solvent: Solvent.alcohol.rawValue,
-                        finish: Finish.clearColor.rawValue)
+        PaintDetailView(paintDatas: paint)
     }
 }

@@ -21,6 +21,7 @@
 		6E240A2327DF803100D76C14 /* BoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E240A2027DF803100D76C14 /* BoardingScreen.swift */; };
 		6E240A2427DF803100D76C14 /* OffsetPageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E240A2127DF803100D76C14 /* OffsetPageTabView.swift */; };
 		6E32E2F728D56280009619B5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E32E2F628D56280009619B5 /* Color.swift */; };
+		6E3A267628D6EAC500F2B277 /* StoragePaintData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3A267528D6EAC500F2B277 /* StoragePaintData.swift */; };
 		6E930378278AAC5F006025AB /* plaplaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E930377278AAC5F006025AB /* plaplaApp.swift */; };
 		6E93037C278AAC60006025AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E93037B278AAC60006025AB /* Assets.xcassets */; };
 		6E93037F278AAC60006025AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E93037E278AAC60006025AB /* Preview Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		6E240A2027DF803100D76C14 /* BoardingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardingScreen.swift; sourceTree = "<group>"; };
 		6E240A2127DF803100D76C14 /* OffsetPageTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetPageTabView.swift; sourceTree = "<group>"; };
 		6E32E2F628D56280009619B5 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		6E3A267528D6EAC500F2B277 /* StoragePaintData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoragePaintData.swift; sourceTree = "<group>"; };
 		6E930374278AAC5F006025AB /* plapla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plapla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E930377278AAC5F006025AB /* plaplaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plaplaApp.swift; sourceTree = "<group>"; };
 		6E93037B278AAC60006025AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				6E1E783A288588E400EFA596 /* RepogitoryManager.swift */,
 				6E1E7836288586CB00EFA596 /* StorageContent.swift */,
 				6E1E783C28858A3A00EFA596 /* StoragePostData.swift */,
+				6E3A267528D6EAC500F2B277 /* StoragePaintData.swift */,
 			);
 			path = Repogitory;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			children = (
 				6EFAB274278C17B700D1C9E5 /* Content.swift */,
 				6E1E78382885877100EFA596 /* PostData.swift */,
+				6EF1A49627E079BC00F5CD38 /* Paint.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -325,7 +329,6 @@
 				6E1E78342885869100EFA596 /* Repogitory */,
 				6E4F55D1285DA49D00469B41 /* DB */,
 				6E240A2027DF803100D76C14 /* BoardingScreen.swift */,
-				6EF1A49627E079BC00F5CD38 /* Paint.swift */,
 				6EC57A1B28BB98630025312D /* ScreenUtil.swift */,
 			);
 			path = Model;
@@ -495,6 +498,7 @@
 				6EE3B3F927E81CAD00698A7B /* ImagePicker.swift in Sources */,
 				6E240A2327DF803100D76C14 /* BoardingScreen.swift in Sources */,
 				6EC57A2128BBB61C0025312D /* PostViewModel.swift in Sources */,
+				6E3A267628D6EAC500F2B277 /* StoragePaintData.swift in Sources */,
 				6E9BCF65278C020300074C64 /* MyPageView.swift in Sources */,
 				DA310C61F5CF4D207B075F91 /* NotificationView.swift in Sources */,
 				468A6F60C397A21BF64CABA1 /* NotificationViewModel.swift in Sources */,

@@ -22,7 +22,7 @@ struct PaintAddView: View {
                     
                     Picker(selection: .constant(1), label: Text("色名")) {
                         ForEach(PaintColor.allCases, id: \.self) { color in
-                            Text(color.colorString).tag(color)
+                            Text(color.rawValue).tag(color)
                         }
                     }
                 }
