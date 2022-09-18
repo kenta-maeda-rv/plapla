@@ -18,6 +18,8 @@ struct ContentAddView: View {
     @State var discriptionText = ""
     @State var imageSelected: UIImage = UIImage(systemName: "camera")!
     
+    @Binding var contents: [Content]
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 32) {
@@ -44,6 +46,7 @@ struct ContentAddView: View {
                     self.viewModel.tapAddButton(title: titleText,
                                                 discription: discriptionText,
                                                 image: imageSelected)
+                    self.contents = RepogitoryManager.shared.getContentData()
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("追加")
@@ -73,7 +76,12 @@ struct ContentAddView: View {
 }
 
 struct ContentAddView_Previews: PreviewProvider {
+    @State static var contents:[Content] = [Content(contentId: "",
+                                                    contentTitle: "",
+                                                    contentDiscription: "",
+                                                    contentImageUrl: "",
+                                                    lastEditDate: Date())]
     static var previews: some View {
-        ContentAddView(contentId: "test")
+        ContentAddView(contentId: "test", contents: $contents)
     }
 }

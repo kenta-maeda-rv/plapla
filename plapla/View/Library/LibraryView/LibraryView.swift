@@ -12,13 +12,13 @@ struct LibraryView: View {
     
     @State var showContentAddView = false
     @State var showContentDetailView = false
-    
+    @State var contents: [Content] = []
     @State var contentId = ""
     
     var body: some View {
         NavigationView{
             ScrollView(.vertical) {
-                if viewModel.contents.isEmpty {
+                if contents.isEmpty {
                     Text("コンテンツを追加してください")
                         .font(.title2)
                         .foregroundColor(.gray)
@@ -28,7 +28,7 @@ struct LibraryView: View {
                               pinnedViews: [.sectionHeaders])
                     {
                         Section {
-                            ForEach(viewModel.contents, id: \.self) { contents in
+                            ForEach(contents, id: \.self) { contents in
                                 VStack {
                                     NavigationLink(destination: ContentDetailView(detailViewContentId: contents.contentId!)) {
                                         ContentCardView(contentId: contents.contentId!)
@@ -54,7 +54,10 @@ struct LibraryView: View {
                 }
             }
             .sheet(isPresented: $showContentAddView) {
-                ContentAddView(contentId: contentId)
+                ContentAddView(contentId: contentId, contents: $contents)
+            }
+            .onAppear {
+                self.contents = RepogitoryManager.shared.getContentData()
             }
         }
     }

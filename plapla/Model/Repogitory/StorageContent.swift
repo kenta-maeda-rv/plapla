@@ -55,4 +55,21 @@ extension RepogitoryManager {
             logger.error("画像の保存に失敗")
         }
     }
+    
+    func getContentData() -> [Content] {
+        var result:[Content] = []
+        guard let contentDatas = RepogitoryManager.shared.contentPermanentlyDb else {
+            print("投稿データの取得失敗")
+            return result
+        }
+        
+        let data = contentDatas.map{Content(contentId: $0.contentId,
+                                            contentTitle: $0.contentTitle,
+                                            contentDiscription: $0.contentDiscription,
+                                            contentImageUrl: $0.contentImageUrl,
+                                            lastEditDate: $0.lastEditDate)}
+        result.append(contentsOf: data)
+        print("取得したコンテンツデータ\(result)")
+        return result
+    }
 }
