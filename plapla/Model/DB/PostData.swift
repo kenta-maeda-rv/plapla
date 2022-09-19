@@ -22,7 +22,7 @@ class PostData: Object {
     @objc dynamic var ImageUrl: String?
     // 工程
     @objc dynamic var process: String?
-    
+
     public convenience init(
         postId: String,
         contentId: String,
@@ -32,7 +32,7 @@ class PostData: Object {
         process: String
     ) {
         self.init()
-        
+
         self.postId = postId
         self.contentId = contentId
         self.postDiscription = postDiscription
@@ -56,6 +56,4 @@ enum Process: String, Hashable, CaseIterable {
     case decalPasting = "デカール貼り"
     /// 完成
     case complete = "完成"
-    
 }
-

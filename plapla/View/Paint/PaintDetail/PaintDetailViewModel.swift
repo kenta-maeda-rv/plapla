@@ -8,6 +8,4 @@
 
 import SwiftUI
 
-class PaintDetailViewModel: ObservableObject {
-
-}
+class PaintDetailViewModel: ObservableObject {}

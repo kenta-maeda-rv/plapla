@@ -8,30 +8,27 @@
 import SwiftUI
 
 extension View {
-    
     func hLeading() -> some View {
-        self
-            .frame(maxWidth: .infinity, alignment: .leading)
+        frame(maxWidth: .infinity, alignment: .leading)
     }
+
     func hTrailing() -> some View {
-        self
-            .frame(maxWidth: .infinity, alignment: .trailing)
+        frame(maxWidth: .infinity, alignment: .trailing)
     }
+
     func hCenter() -> some View {
-        self
-            .frame(maxWidth: .infinity, alignment: .center)
+        frame(maxWidth: .infinity, alignment: .center)
     }
+
     func vTop() -> some View {
-        self
-            .frame(maxHeight: .infinity, alignment: .top)
+        frame(maxHeight: .infinity, alignment: .top)
     }
+
     func vBottom() -> some View {
-        self
-            .frame(maxHeight: .infinity, alignment: .bottom)
+        frame(maxHeight: .infinity, alignment: .bottom)
     }
+
     func vCenter() -> some View {
-        self
-            .frame(maxHeight: .infinity, alignment: .center)
+        frame(maxHeight: .infinity, alignment: .center)
     }
-    
 }

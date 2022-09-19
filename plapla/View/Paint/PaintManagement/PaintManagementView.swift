@@ -6,15 +6,15 @@
 //  Copyright 2022 raven. All rights reserved.
 //
 
-import SwiftUI
 import RealmSwift
+import SwiftUI
 
 struct PaintManagementView: View {
-    @StateObject var viewModel: PaintManagementViewModel = PaintManagementViewModel()
-    
+    @StateObject var viewModel: PaintManagementViewModel = .init()
+
     @State var showPaintDetailView = false
     @State var paintDatas: [Paint] = []
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -53,31 +53,30 @@ struct PaintManagementView_Previews: PreviewProvider {
 }
 
 struct PaintView: View {
-    
     let colorName: String
     let ProgressValue: Double
-    
+
     var body: some View {
-        HStack(alignment:.center) {
+        HStack(alignment: .center) {
             Rectangle()
                 .fill(Color(PaintUIColorDic[colorName]!))
                 .frame(width: 50, height: 50)
                 .cornerRadius(15)
                 .padding(16)
-            
+
             GeometryReader { geometry in
                 HStack {
                     Text(colorName)
                         .foregroundColor(.primary)
                         .font(.body)
-                        .frame(width:  geometry.size.width / 3,
-                               height:  geometry.size.height,
+                        .frame(width: geometry.size.width / 3,
+                               height: geometry.size.height,
                                alignment: .leading)
-                    
+
                     ProgressView(value: ProgressValue / 100)
-                        .frame(height:  geometry.size.height,
+                        .frame(height: geometry.size.height,
                                alignment: .center)
-                        .padding(.horizontal,10)
+                        .padding(.horizontal, 10)
                 }
             }
         }

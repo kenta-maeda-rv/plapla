@@ -8,7 +8,6 @@
 import SwiftUI
 
 class ContentAddViewModel: ObservableObject {
-    
     func tapAddButton(
         title: String,
         discription: String,

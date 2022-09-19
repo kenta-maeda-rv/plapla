@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct TagView: View {
-    
     let process: String
-    
+
     var body: some View {
-        VStack{
+        VStack {
             Text(process)
                 .font(.subheadline)
                 .foregroundColor(.white)

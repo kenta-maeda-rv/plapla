@@ -7,7 +7,4 @@
 
 import SwiftUI
 
-class ContentDetailViewModel: ObservableObject {
-    
-
-}
+class ContentDetailViewModel: ObservableObject {}

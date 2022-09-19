@@ -7,6 +7,4 @@
 
 import SwiftUI
 
-class MyPageViewModel: ObservableObject {
-
-}
+class MyPageViewModel: ObservableObject {}

@@ -22,7 +22,6 @@ struct BoardingScreen: Identifiable {
 
 /// チュートリアル画像配列
 var boardingScreens: [BoardingScreen] = [
-
     BoardingScreen(image: "create",
                    title: "プラモ作成の記録",
                    description: "プラモデル作成の進捗を記録"),

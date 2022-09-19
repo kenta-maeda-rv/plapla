@@ -13,13 +13,12 @@ struct ImageSelectButton: View {
     @State var showPostImageView: Bool = false
     @Binding var imageSelected: UIImage
     @State var sourceType: UIImagePickerController.SourceType = .camera
-    
+
     var body: some View {
         VStack {
             Button(action: {
                 showAlert.toggle()
             }) {
-                
                 if imageSelected == UIImage(systemName: "camera")! {
                     Image(uiImage: imageSelected)
                         .resizable()
@@ -42,20 +41,23 @@ struct ImageSelectButton: View {
                     buttons: [
                         .default(
                             Text("写真を撮る"),
-                            action:{
+                            action: {
                                 sourceType = UIImagePickerController.SourceType.camera
                                 showImagePicker.toggle()
-                            }),
+                            }
+                        ),
                         .default(
                             Text("ライブラリから選択"),
-                            action:{
+                            action: {
                                 sourceType = UIImagePickerController.SourceType.photoLibrary
                                 showImagePicker.toggle()
-                            }),
-                        .cancel()
-                    ])
+                            }
+                        ),
+                        .cancel(),
+                    ]
+                )
             }
-            
+
             .sheet(isPresented: $showImagePicker) {
                 ImagePicker(imageselected: $imageSelected, sourceType: $sourceType)
             }
@@ -64,7 +66,7 @@ struct ImageSelectButton: View {
 }
 
 struct ImageSelectButton_Previews: PreviewProvider {
-    @State static var image: UIImage = UIImage(systemName: "camera")!
+    @State static var image: UIImage = .init(systemName: "camera")!
     static var previews: some View {
         ImageSelectButton(imageSelected: $image)
     }

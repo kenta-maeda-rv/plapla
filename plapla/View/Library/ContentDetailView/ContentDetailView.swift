@@ -10,15 +10,15 @@ import SwiftUI
 struct ContentDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     var detailViewContentId = ""
-    @StateObject var viewModel: ContentDetailViewModel = ContentDetailViewModel()
-    
+    @StateObject var viewModel: ContentDetailViewModel = .init()
+
     @State var postDatas: [PostData] = [PostData(postId: "",
                                                  contentId: "",
                                                  postDiscription: "",
                                                  postDate: Date(),
-                                                 ImageUrl:  "",
+                                                 ImageUrl: "",
                                                  process: "")]
-    
+
     var body: some View {
         ZStack {
             VStack {

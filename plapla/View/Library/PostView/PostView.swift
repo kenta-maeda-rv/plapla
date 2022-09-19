@@ -9,30 +9,29 @@ import SwiftUI
 
 struct PostView: View {
     @Environment(\.presentationMode) var presentationMode
-    
-    @StateObject var viewModel: PostViewModel = PostViewModel()
-    
+
+    @StateObject var viewModel: PostViewModel = .init()
+
     @State var titleText = ""
     @State var discriptionText = ""
-    @State var imageSelected: UIImage = UIImage(systemName: "camera")!
+    @State var imageSelected: UIImage = .init(systemName: "camera")!
     @State var process: Process = .preparation
     @Binding var postDatas: [PostData]
-    
+
     var contentId: String
-    
+
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 32) {
-                
                 ImageSelectButton(imageSelected: $imageSelected)
-                
+
                 VStack(spacing: 32) {
                     VStack {
                         TextField("投稿文", text: $discriptionText)
                             .tint(.secondary)
                         Divider()
                     }
-                    
+
                     VStack {
                         HStack {
                             Text("工程")
@@ -51,13 +50,12 @@ struct PostView: View {
                 }
                 .padding(10)
                 .padding(.horizontal, 18)
-                
+
                 Button(action: {
                     self.viewModel.savePostData(contentId: contentId,
                                                 discription: discriptionText,
                                                 image: imageSelected,
-                                                process: process
-                    )
+                                                process: process)
                     self.postDatas = RepogitoryManager.shared.getPostData(contentId: self.contentId)
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
@@ -68,7 +66,7 @@ struct PostView: View {
                 .frame(height: 60)
                 .background(Color.accentColor)
                 .cornerRadius(15)
-                
+
                 Spacer()
             }
             .navigationBarTitle(Text("投稿"),
@@ -88,13 +86,13 @@ struct PostView: View {
 }
 
 struct PostView_Previews: PreviewProvider {
-    @State static var postData:[PostData] = [PostData(postId: "postId",
-                                                      contentId: "contentId",
-                                                      postDiscription: "postDiscription",
-                                                      postDate: Date(),
-                                                      ImageUrl:  "ImageUrl",
-                                                      process: "本組")]
-    
+    @State static var postData: [PostData] = [PostData(postId: "postId",
+                                                       contentId: "contentId",
+                                                       postDiscription: "postDiscription",
+                                                       postDate: Date(),
+                                                       ImageUrl: "ImageUrl",
+                                                       process: "本組")]
+
     static var previews: some View {
         PostView(postDatas: $postData, contentId: "")
     }

@@ -8,7 +8,7 @@ target 'plapla' do
   
   pod 'RealmSwift'
   pod 'SwiftGen'
-  pod 'SwiftFormat'
+  pod 'SwiftFormat/CLI', :configurations => ['Debug']
   pod 'SwiftLint'
 
   # Pods for plapla

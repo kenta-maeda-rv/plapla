@@ -8,6 +8,5 @@
 import SwiftUI
 
 class LibraryViewModel: ObservableObject {
-    
-    @Published var columns: [GridItem] = [GridItem(),GridItem()]
+    @Published var columns: [GridItem] = [GridItem(), GridItem()]
 }

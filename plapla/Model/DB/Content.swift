@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import SwiftUI
 import RealmSwift
+import SwiftUI
 
 /// コンテンツ
 class Content: Object {
@@ -21,7 +21,7 @@ class Content: Object {
     @objc dynamic var contentImageUrl: String?
     // 最終編集日
     @objc dynamic var lastEditDate: Date?
-    
+
     public convenience init(
         contentId: String?,
         contentTitle: String?,
@@ -30,7 +30,7 @@ class Content: Object {
         lastEditDate: Date?
     ) {
         self.init()
-        
+
         self.contentId = contentId
         self.contentTitle = contentTitle
         self.contentDiscription = contentDiscription

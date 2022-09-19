@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MyPageView: View {
-    @StateObject var viewModel: MyPageViewModel = MyPageViewModel()
-    
+    @StateObject var viewModel: MyPageViewModel = .init()
+
     var body: some View {
         NavigationView {
             List {
@@ -18,7 +18,7 @@ struct MyPageView: View {
                 }, header: {
                     Text("各種設定")
                 })
-                
+
                 Section(content: {
                     Text("お知らせ")
                     Text("問い合わせ")

@@ -8,10 +8,9 @@
 import SwiftUI
 
 class PostViewModel: ObservableObject {
-    
     func savePostData(
         contentId: String,
-        discription:String,
+        discription: String,
         image: UIImage,
         process: Process
     ) {

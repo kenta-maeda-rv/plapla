@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct plaplaApp: App {
     @Environment(\.scenePhase) private var scenePhase
-    
+
     var body: some Scene {
         WindowGroup {
             HomeTabView()

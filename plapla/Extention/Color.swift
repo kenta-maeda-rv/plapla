@@ -7,6 +7,4 @@
 
 import SwiftUI
 
-extension Color {
-
-}
+extension Color {}

@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct LibraryView: View {
-    @StateObject var viewModel: LibraryViewModel = LibraryViewModel()
-    
+    @StateObject var viewModel: LibraryViewModel = .init()
+
     @State var showContentAddView = false
     @State var showContentDetailView = false
     @State var contents: [Content] = []
     @State var contentId = ""
-    
+
     var body: some View {
-        NavigationView{
+        NavigationView {
             ScrollView(.vertical) {
                 if contents.isEmpty {
                     Text("コンテンツを追加してください")
@@ -25,8 +25,7 @@ struct LibraryView: View {
                 } else {
                     LazyVGrid(columns: viewModel.columns,
                               spacing: 20,
-                              pinnedViews: [.sectionHeaders])
-                    {
+                              pinnedViews: [.sectionHeaders]) {
                         Section {
                             ForEach(contents, id: \.self) { contents in
                                 VStack {
@@ -61,10 +60,10 @@ struct LibraryView: View {
             }
         }
     }
-    
+
     func ContentCardView(contentId: String) -> some View {
         VStack {
-            Image(uiImage: ((ScreenUtil.getImage(id: contentId) ?? UIImage(named: "create"))!))
+            Image(uiImage: (ScreenUtil.getImage(id: contentId) ?? UIImage(named: "create"))!)
                 .resizable()
                 .frame(width: 150, height: 150, alignment: .center)
                 .background(
@@ -80,4 +79,3 @@ struct LibraryView_Previews: PreviewProvider {
         LibraryView()
     }
 }
-

@@ -9,14 +9,13 @@ import Foundation
 import RealmSwift
 
 class RepogitoryManager {
-    
     static let shared = RepogitoryManager()
-    
+
     func realmPermanentlyDb() throws -> Realm {
-        return try Realm()
+        try Realm()
     }
-    
-    //保存するためのパスを作成する
+
+    // 保存するためのパスを作成する
     func createLocalDataFile(id: String) -> URL {
         // 作成するテキストファイルの名前
         let fileName = "\(id).png"
@@ -24,7 +23,7 @@ class RepogitoryManager {
         let documentDirectoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         // ディレクトリのパスにファイル名をつなげてファイルのフルパスを作る
         let path = documentDirectoryFileURL.appendingPathComponent(fileName)
-        
+
         return path
     }
 }
