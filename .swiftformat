@@ -1,0 +1,2 @@
+# 対象外のファイル・フォルダ
+--exclude Pods, Carthage

@@ -1,0 +1,20 @@
+# 対象外のファイル・フォルダ
+excluded:
+  - Pods
+  - Carthage
+  - SourcePackages
+  - Generated
+
+opt_in_rules:
+  - Collection Element Alignment
+  - Empty Count
+  - Explicit Self
+  - Explicit Type Interface
+  - First Where
+  - Indentation Width
+  - Variable Declaration Whitespace
+  - Multiline Arguments Brackets
+  - Multiline Literal Brackets
+  - Multiline Parameters Brackets
+  - Vertical Whitespace before Closing Braces
+  - Vertical Whitespace after Opening Braces
